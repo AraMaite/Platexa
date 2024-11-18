@@ -1,0 +1,447 @@
+* {  
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
+}  
+body {  
+  font-family: Arial, sans-serif;  
+  line-height: 1.6;  
+  background-color: #06184d;  
+}  
+header {
+  background: #06184d;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  text-align: left; /*logo a la izquierda */
+}
+.nav-bar {  
+  background-color: #06184d; /* Color del menú*/  
+}  
+.nav-bar ul {  
+  list-style: none;  
+  padding: 0;  
+}  
+.nav-bar ul li {  
+  display: inline-block;  
+  margin: 0 50px;  
+}  
+.nav-bar ul li a {  
+  color: #ffffff; /*texto*/  
+  text-decoration: none;  
+}  
+header .logo-banner .logo {  
+  width: 350px; /* Ajusta el tamaño según sea necesario */  
+  height: auto; /* Mantiene la proporción de la imagen */ 
+  max-width: none; 
+  background-color: #06184d; /* Cambia el color de fondo */  
+  padding-left: 0px;    
+}
+/*Index*/
+.carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+.carrusel-inner {
+  display: flex;
+  transition: transform 0.10s ease-in-out;
+  width: 100%;
+}
+.carrusel-item {
+  min-width: 100%;
+  position: relative;
+}
+.carrusel-item img {
+  width: 100%;
+  height: auto;
+}
+.carrusel-text {
+  position:absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  color: rgb(5, 5, 5);
+  text-align: center;
+  background-color: none;
+  padding: 20px;
+  border-radius: 5px;
+}
+.carrusel-text h3 {
+  font-size: 2.5rem; /*tamaño del título */
+  font-weight: bold; /*grosor del texto */
+  color: #040404; /*color del texto*/
+}
+.carrusel-text p {
+  font-size: 1.2rem; /*tamaño de la letra del párrafo */
+  line-height: 1; /*espacia entre líneas */
+  color: #000000; /*color del texto*/
+}
+.boton {
+  font-size: 1rem;
+  padding: 10px 10px; /*tamaño del botón */
+  background-color: #5373d2; /*color del botón */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px; /*espacion boton texto*/
+  display: inline-block;
+}
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(7, 7, 7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 50px;
+  border-radius: 50%;
+}
+button.prev { left: 10px; }
+button.next { right: 10px; }
+.servicios {
+  display: flex;
+  gap: 1.5em;
+  padding: 2em;
+  justify-content: center;
+  background-color: #06184d;
+}
+.servicio {
+    background-color: white; /* Fondo blanco */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.servicio img {
+  width: 50px;
+  height:auto;
+  margin-bottom: 0.5em;
+  border-radius: 50%;
+}
+.servicio h3 {
+  margin: 0.5em 0;
+}
+#productos-destacados {
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr); /*tres columnas*/  
+  gap: 20px; /*espacio entre los cuadros*/  
+  justify-items: center; /*centrar los elementos*/  
+  padding: 20px;  
+}
+.producto {
+  background-color: #ffffff; /*fondo similar al botón*/
+  padding: 30px; /*espaciado interno*/
+  border-radius: 5px;
+  text-align: center; /*centrar texto*/
+}
+.producto img {
+  max-width: 100%;
+  height: auto;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 15px; 
+}
+.boton-ver-mas {
+  text-decoration: none; 
+  color: rgb(0, 0, 0);
+  background-color: #b0c7e0; /*boton*/
+  padding: 10px 15px; /*espaciado del botón */
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.boton-ver-mas:hover {
+  background-color: #A0B7D6; /*cambio de color al pasar el mouse */
+}
+.servicios {
+  padding: 20px;
+  text-align: center;
+}
+.servicios-grid{
+  display: flex;
+  justify-content: center;
+  gap: 20px; /*espacio entre elementos*/
+  flex-wrap: wrap; /*para que se acomoden en varias líneas*/
+}
+.servicio {
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  padding: 10px;
+  max-width: 300px; /*ancho de cada tarjeta*/
+}
+.servicio img, .producto img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.boton-servicio, .boton-producto {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px; /*espacio sobre el botón*/
+  background-color: #007BFF; /*color del botón*/
+  color: #fff; 
+  text-decoration: none; 
+  border-radius: 5px; 
+}
+.boton-servicio:hover, .boton-producto:hover {
+  background-color: #0056b3; 
+}
+/*Productos*/
+#productos {
+  padding: 20px;
+  text-align: center;
+}
+.productos-grid {  
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  justify-items: center; 
+  padding: 20px;  
+}  
+.producto {  
+  border: 1px solid #ccc;
+  border-radius: 8px; 
+  padding: 15px; /*interno */  
+  text-align: center; 
+  width: 100%; 
+} 
+.boton-ver-mas {
+  text-decoration: none; 
+  color: white;
+  background-color: #b0c7e0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; 
+}
+.boton-ver-mas:hover {
+  background-color: #0056b3;
+}
+.boton-producto, button {  
+  margin-top: 10px; /*espacio botones y texto*/  
+}
+.producto:hover {
+  transform: scale(1.05); /*aumenta el tamaño al pasar el mouse*/
+}
+.producto img {
+  max-width: 100%; /*imagen responsiva*/
+  height: auto; 
+}
+.precio {
+  font-size: 1.2em;
+  margin: 10px 0; /*espacio arriba y abajo */
+}
+button {
+  background-color: #5bc0de; /*color de fondo del botón */
+  color: white; /*color del texto */
+  border: none;
+  padding: 10px 15px; /*espacio interno */
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #31b0d5; /*color al pasar el mouse */
+}
+/*Clientes*/ 
+.carousel {  
+  position: relative;  
+  max-width: 90%;  
+  margin: 20px auto;  
+  overflow: hidden;  
+}  
+.carousel-inner {
+  display: flex; /* Alinea los elementos en fila */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+  height: 300px; /* Ajusta según el tamaño de tu carrusel */
+}
+.carousel-item {
+  flex: 0 0 auto; /* Evita que los items se estiren */
+  text-align: center; /* Centra contenido dentro de cada item */
+}
+.carousel-item img {
+  width: 250px; /* Ajusta al tamaño deseado */
+  height: auto; /* Mantén la proporción */
+  margin: auto; /* Centra la imagen dentro del item */
+  display: block; /* Asegura que las imágenes respeten el margen */
+}
+button.prev, button.next {  
+  position: absolute;  
+  top: 50%;  
+  transform: translateY(-50%);  
+  background-color: rgba(0, 0, 0, 0.5);  
+  color: white;  
+  border: none;  
+  padding: 10px;  
+  cursor: pointer;  
+}  
+button.prev {  
+  left: 10px;  
+}  
+button.next {  
+  right: 10px;  
+}  
+.introduction {  
+  padding: 20px;  
+  background-color: #06184d; /*fondo de la introducción*/  
+  color: #0a0a0a; /*texto*/  
+  text-align: center;  
+}  
+/*Contacto*/
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; 
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.mapa-container{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+.mapa {
+  width: 100%;  
+  max-width: 600px;  
+  height: 500px; 
+}
+.from-container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+}   
+h1 {  
+  font-size: 24px;  
+  text-align: center;  
+  margin: 20px 0;  
+}  
+form {  
+  width: 100%;  
+  padding: 10px; 
+  box-sizing: border-box; 
+}
+form label {  
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;  
+}  
+form input, form textarea {  
+  width: 100%;
+  padding: 10px;  
+  margin-top: 5px;
+  font-size: 1rem;  
+  border: 1px solid #ccc;  
+  border-radius: 4px;  
+}  
+form input[type="submit"] {  
+  background-color: #007BFF;  
+  color: white;  
+  border: none;  
+  cursor: pointer;  
+  margin-top: 20px;  
+}
+form input[type="submit"]:hover {  
+  background-color: #0056b3;  
+} 
+.contact-section {  
+  text-align: center;  
+  padding: 50px 20px;  
+  background-color: #06184d;  /*color de fondo*/  
+}  
+.contact-section h1 {  
+  font-size: 32px;  
+  margin-bottom: 40px;  
+}  
+.contact-cards {  
+  display: flex;  
+  justify-content: center;  
+  gap: 30px;  
+  flex-wrap: wrap; 
+}
+.contact-card {  
+  background-color: white; /*color de fondo de las tarjetas */  
+  border-radius: 10px;  
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra para un efecto 3D */  
+  padding: 20px;  /*interno */  
+  width: 250px; /*ancho para cada tarjeta*/  
+  text-align: center;  
+}  
+.icon-container {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  margin-bottom: 15px; /*espacio icono y título */  
+}  
+.contact-icon {  
+  width: 60px; 
+  height: auto; 
+}
+/*Footer*/
+footer {  
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  padding: 20px;  
+  background-color: #06184d;
+  position: relative;  
+}
+.footer-divider {  
+  width: 1px;   
+  background-color: rgb(255, 255, 255);  
+  height: 100px;/*altura*/  
+  margin: 10px 20px;/*espacio vertical*/  
+}
+.footer-sections ul {
+  list-style: none;
+}
+.footer-sections a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.footer-sections h3,  
+.footer-contact h3,  
+.footer-map h3 {  
+  color: #656161; /*títulos*/  
+}  
+p {
+  color: white;
+}
+.footer-left .footer-img.logo-reducida {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+.footer-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 10px;
+}
+.footer-map {
+  margin-top: 10px; /*espacio superior */
+  text-align: center;
+}
+.argentina-map {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-top: 10px;
+}
