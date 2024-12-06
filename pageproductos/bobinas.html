@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pageproductos/styleprod.css">
+    <script src="/pageproductos/javascript.js"></script>
+    <title>Productos</title>
+</head>
+<body>
+    <header>
+        <div class="logo-banner">
+            <img class="logo" src="/Img y Fondos/Berplast LOGO.png" alt="logo">
+        </div>
+    </header>
+    
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/pages/productos.html">Productos</a></li>
+            <li><a href="/pages/clientes.html">Clientes</a></li>
+            <li><a href="/pages/contacto.html">Contactos</a></li>
+        </ul>
+    </nav>
+    
+    <section id="producto-detalle">
+        <div class="producto-imagen">
+            <img src="/productos/Bobinas.png" alt="Nombre del Producto">
+        </div>
+        <div class="producto-info">
+            <h2>Nombre del Producto</h2>
+            <h3>Características:</h3>
+            <ul>
+                <li>Material a eleccion</li>
+                <li>Línea estándar y trabajos personalizados.</li>
+            </ul>
+            <p>Bobinas a medidas dedes delos 8cm de ancho hasta los 1,20 de ancho.</p>
+            <button class="">Presupuestar</button>
+        </div>
+    </section>
+
+    <script>
+    document.querySelector('.btn-especificaciones').addEventListener('click', function() {
+        var tabla = document.getElementById('tabla-especificaciones');
+        if (tabla.style.display === 'none' || tabla.style.display === '') {
+            tabla.style.display = 'block';
+        } else {
+            tabla.style.display = 'none';
+        }
+    });
+    </script>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="/Img y Fondos/Berplast LOGO.png" alt="Logo" class="logo-reducida">
+        </div>
+        <div class="footer-sections">
+            <h3>Secciones</h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="/pages/productos.html">Productos</a></li>
+                <li><a href="/pages/clientes.html">Clientes</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contacto</h3>
+            <p>📍 Calle Entre Muros y Marsella,Edificio 55, C.P. 1923, Berisso, Provincia de Buenos Aires.</p>
+            <p>📞 +54 9 0221-2020035</p>
+            <p>📧 administracion@berplast.com</p>
+        </div>
+        <div class="footer-export">
+            <h3>Exportaciones</h3>
+            <img src="/Img y Fondos/argentina.webp" alt="Mapa Exportaciones" class="export-map">
+        </div>
+    </footer>
+</body>
+</html>

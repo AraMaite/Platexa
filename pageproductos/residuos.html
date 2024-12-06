@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pageproductos/styleprod.css">
+    <script src="/pageproductos/javascript.js"></script>
+    <title>Productos</title>
+</head>
+<body>
+    <header>
+        <div class="logo-banner">
+            <img class="logo" src="/Img y Fondos/Berplast LOGO.png" alt="logo">
+        </div>
+    </header>
+    
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/pages/productos.html">Productos</a></li>
+            <li><a href="/pages/clientes.html">Clientes</a></li>
+            <li><a href="/pages/contacto.html">Contactos</a></li>
+        </ul>
+    </nav>
+    
+    <section id="producto-detalle">
+        <div class="producto-imagen">
+            <img src="/productos/Escombros.png" alt="Nombre del Producto">
+        </div>
+        <div class="producto-info">
+            <h2>Nombre del Producto</h2>
+            <h3>Características:</h3>
+            <ul>
+                <li>Polietileno A.D.</li>
+                <li>Línea estándar y trabajos personalizados.</li>
+                <li>Amplia variedad de medidas. Ver especificaciones.</li>
+            </ul>
+            <p>Descripción breve del producto con características destacadas.</p>
+            <button class="btn-especificaciones">VER ESPECIFICACIONES</button>
+        </div>
+        <div id="tabla-especificaciones" style="display: none;"> 
+            <table> 
+                <thead> 
+                    <tr> 
+                        <th>Tipo</th> 
+                        <th>Peso Bobina (Kgs)</th>
+                        <th>Bobinas x Bulto</th>
+                        <th>Bultos x Pallet</th>
+                    </tr>
+                </thead> 
+                <tbody> 
+                    <tr> 
+                        <td>Arranque 15x20</td> 
+                        <td>0.297</td> 
+                        <td>12</td> 
+                        <td>170</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Arranque 15x25</td> 
+                        <td>0.297</td> 
+                        <td>12</td> 
+                        <td>170</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Arranque 20x25</td> 
+                        <td>0.395</td> 
+                        <td>12</td> 
+                        <td>85</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Arranque 20x30</td> 
+                        <td>0.744</td> 
+                        <td>12</td> 
+                        <td>66</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Arranque 25x35</td> 
+                        <td>0.744</td> 
+                        <td>12</td> 
+                        <td>66</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Arranque 30x40</td> 
+                        <td>0.744</td> 
+                        <td>12</td> 
+                        <td>105</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Arranque 35x45</td> 
+                        <td>0.744</td> 
+                        <td>12</td> 
+                        <td>105</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Arranque 40x50</td> 
+                        <td>0.744</td> 
+                        <td>12</td> 
+                        <td>126</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Arranque 40x60</td> 
+                        <td>0.744</td> 
+                        <td>12</td> 
+                        <td>126</td> 
+                    </tr> 
+                </tbody> 
+            </table> 
+        </div>
+    </section>
+
+    <script>
+    document.querySelector('.btn-especificaciones').addEventListener('click', function() {
+        var tabla = document.getElementById('tabla-especificaciones');
+        if (tabla.style.display === 'none' || tabla.style.display === '') {
+            tabla.style.display = 'block';
+        } else {
+            tabla.style.display = 'none';
+        }
+    });
+    </script>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="/Img y Fondos/Berplast LOGO.png" alt="Logo" class="logo-reducida">
+        </div>
+        <div class="footer-sections">
+            <h3>Secciones</h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="/pages/productos.html">Productos</a></li>
+                <li><a href="/pages/clientes.html">Clientes</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contacto</h3>
+            <p>📍 Calle Entre Muros y Marsella,Edificio 55, C.P. 1923, Berisso, Provincia de Buenos Aires.</p>
+            <p>📞 +54 9 0221-2020035</p>
+            <p>📧 administracion@berplast.com</p>
+        </div>
+        <div class="footer-export">
+            <h3>Exportaciones</h3>
+            <img src="/Img y Fondos/argentina.webp" alt="Mapa Exportaciones" class="export-map">
+        </div>
+    </footer>
+</body>
+</html>

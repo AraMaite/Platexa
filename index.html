@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css"/>
     <title>BerPlast</title>
 </head>
+<body>
     <header>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="/pages/productos.html">Productos</a></li>
+                <li><a href="/pages/clientes.html">Clientes</a></li>
+                <li><a href="/pages/contacto.html">Contactos</a></li>
+            </ul>
+        </nav>
         <div class="logo-banner">
-            <img class="logo" src="/Img y Fondos/Berplast LOGO.png" alt="logo">
+            <img class="logo" src="/Img y Fondos/Berplast Gris.png" alt="logo">
         </div>
     </header>
-    
-    <nav class="nav-bar">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="/pages/productos.html">Productos</a></li>
-            <li><a href="/pages/clientes.html">Clientes</a></li>
-            <li><a href="/pages/contacto.html">Contactos</a></li>
-        </ul>
-    </nav>
-
     <section class="carrusel">
         <div class="carrusel-inner">
             <div class="carrusel-item active">
@@ -48,12 +51,10 @@
                 </div>
             </div>
         </div>
-        <button class="prev" onclick="moveSlide(-1)">❮</button>
-        <button class="next" onclick="moveSlide(1)">❯</button>
     </section>
+
     <script>
         let currentSlide = 0;
-
         function moveSlide(direction) {
             const slides = document.querySelectorAll('.carrusel-item');
             slides[currentSlide].classList.remove('active');
@@ -64,78 +65,96 @@
             const translateX = -currentSlide * 100;
             document.querySelector('.carrusel-inner').style.transform = `translateX(${translateX}%)`;
         }
-
         setInterval(() => moveSlide(1), 3000);
     </script>
+    
     <section class="servicios">
         <div class="servicio">
-            <img src="/Icons/calidad.png" alt="Calidad">
+            <img src="/Img y Fondos/Calidad.png" alt="Calidad">
             <h3>Calidad</h3>
             <p>Materiales de alta calidad con estrictas normas de producción.</p>
         </div>
         <div class="servicio">
-            <img src="/Icons/variedad.png" alt="Variedad">
+            <img src="/Img y Fondos/Variedad.png" alt="Variedad">
             <h3>Variedad</h3>
             <p>Amplia gama de productos adaptados a diversas industrias.</p>
         </div>
         <div class="servicio">
-            <img src="/Icons/innovacion.png" alt="Innovación">
+            <img src="/Img y Fondos/Innovacion.png" alt="Innovación">
             <h3>Innovación</h3>
             <p>Diseños y soluciones modernas para cada necesidad.</p>
         </div>
     </section>
     <section id="productos-destacados">
-        <br>
-        <br>
-        <h2>Productos destacados</h2>
-        <br>
+        <h1>Productos destacados</h1>
         <div class="producto">
             <img src="/productos/Hielo.png" alt="Producto 1">
             <h3>Bolsas para Hielo</h3>
-            <p>Fabricado con materia prima de alta calidad, polirtileno de baja densidad. Preparado para poner en condiciones de -15ª</p>
             <a href="pages/productos.html" class="boton-producto">Ver precios</a>
             <a href="/pages/contacto.html" class="boton-ver-mas">Ver más</a>
         </div>
         <div class="producto">
             <img src="/productos/Leña.png" alt="Producto 2">
             <h3>Bolsas para Carbon y Leña</h3>
-            <p>Breve descripción del producto.</p>
             <a href="pages/productos.html" class="boton-producto">Ver precios</a>
             <a href="/pages/contacto.html" class="boton-ver-mas">Ver más</a>  
         </div>
         <div class="producto">
-            <img src="/productos/Bobinas de Polietileno.png" alt="Producto 2">
+            <img src="/productos/Residuos.png" alt="Producto 4">
             <h3>Bolsas de Residuos Reforsadas</h3>
-            <p>Breve descripción del producto.</p>
             <a href="pages/productos.html" class="boton-producto">Ver precios</a>
             <a href="/pages/contacto.html" class="boton-ver-mas">Ver más</a>
         </div>
+        <div class="producto">
+            <img src="/productos/Camisera.png" alt="Producto 5">
+            <h3>Bolsas camisetas</h3>
+            <a href="/pageproductos/camisetas.html" class="boton-producto">Ver precios</a>
+            <a href="/pages/contacto.html" class="boton-ver-mas">Ver más</a>
     </section>
+
+    <div class="form-container-index"> 
+        <h1>Contactate con nosotros</h1>  
+        <form id="contactindex">  
+            <label for="nombre">Nombre:</label>  
+            <input type="text" id="nombre" name="nombre" required>  
+        
+            <label for="email">Email:</label>  
+            <input type="email" id="email" name="email" required>  
+        
+            <label for="consulta">Consulta:</label>  
+            <textarea id="consulta" name="consulta" rows="4" required></textarea>  
+        
+            <input type="submit" value="Enviar">  
+        </form> 
+    </div>
+
     <footer>
-        <div class="footer-left">
-            <img src="/Img y Fondos/Berplast LOGO.png" alt="Casa" class="footer-img logo-reducida">
+        <div class="footer-logo">
+            <img src="/Img y Fondos/Berplast.png" alt="Logo" class="logo-reducida">
         </div>
-        <div class="footer-divider"></div>
         <div class="footer-sections">
             <h3>Secciones</h3>
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="/pages/productos.html">Productos</a></li>
                 <li><a href="/pages/clientes.html">Clientes</a></li>
-                <li><a href="/pages/contacto.html">Contactos</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
             </ul>
         </div>
-        <div class="footer-divider"></div>
         <div class="footer-contact">
             <h3>Contacto</h3>
-            <p>Email: administracion@berplast.com</p>
-            <p>Tel: +54 221 202 0035</p>
+            <p> Calle Entre Muros y Marsella,Edificio 55, C.P. 1923, Berisso, Provincia de Buenos Aires.</p>
+            <br>
+            <p> +54 9 0221-2020035</p>
+            <br>
+            <p> administracion@berplast.com</p>
+            <br>
         </div>
-        <div class="footer-divider"></div>
-        <div class="footer-map">
-            <h3>Trabajamos en todo el pais</h3>
-            <img src="/Img y Fondos/MapaArg.png" alt="Mapa de Argentina" class="argentina-map">
+        <div class="footer-export">
+            <h3>Importaciones</h3>
+            <img src="/Img y Fondos/Mapa.png" alt="Mapa Exportaciones" class="export-map">
         </div>
     </footer>
+    
 </body>
 </html>

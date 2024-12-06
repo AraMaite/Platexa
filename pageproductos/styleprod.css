@@ -1,0 +1,206 @@
+* {
+  font-family: "Hind Siliguri", sans-serif; 
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
+}  
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato",Arial, sans-serif;
+  background-color: #ffffff; /* Fondo blanco */
+  color: #000000; /* Texto negro */
+}
+header {
+  background: #06184d;
+  padding: 10px 0;
+  margin: 0;
+  text-align: left; /*logo a la izquierda */
+}
+.nav-bar {  
+  background-color: #ffffff; /*color del rectangulo*/  
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba rgba(0, 0, 0, 0.1); /*sombra*/
+}  
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+} 
+.nav-bar li {    
+  margin: 0 25px;  
+}  
+.nav-bar a {
+  color: #000000; /* Color del texto */
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.nav-bar a:hover {
+  color: #f0a500; /*color para el hover */
+}
+header .logo-banner .logo {  
+  width: 350px; /*el tamaño*/  
+  height: auto; 
+  max-width: none; 
+  background-color: #06184d; /*color de fondo */  
+  padding-left: 0px;    
+}
+#producto-detalle {
+    display: flex;
+    padding: 20px;
+}
+.producto-imagen img {
+  max-width: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.producto-info {
+    margin-left: 20px;
+}
+.menu-navegacion {
+    margin-top: 20px;
+}
+.menu-navegacion input[type="search"] {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.menu-navegacion ul {
+    list-style: none;
+    padding: 0;
+}
+.menu-navegacion li {
+    margin-bottom: 5px;
+}
+.menu-navegacion a {
+    text-decoration: none;
+    color: #333;
+}
+#promociones {
+    margin-top: 20px;
+}
+#promociones form {
+    display: flex;
+    flex-direction: column;
+}
+#promociones label {
+    margin-top: 10px;
+}
+#promociones input {
+    padding: 5px;
+}
+.btn-especificaciones {
+    background-color: #06184d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.tabla-desplegable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+.tabla-desplegable.desplegada {
+  max-height: 500px; /* Ajusta según el tamaño de la tabla */
+}
+#tabla-especificaciones {
+  margin-top: 20px;
+}
+#tabla-especificaciones table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#tabla-especificaciones th, #tabla-especificaciones td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+#tabla-especificaciones th {
+  background-color: #f2f2f2;
+}
+/*FOOTER*/
+footer {
+  background-color: #06184d;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 40px 20px 0; 
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+  footer div {
+  flex: 1;
+  margin: 0 15px;
+}
+.footer-logo {
+  flex: 1; 
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  padding-left: 0; 
+  margin: 0; 
+}
+.footer-logo img {
+  max-width: 150px; 
+  height: auto;
+  margin: 0; 
+  padding: 0; 
+  position: relative; 
+  left: 0;  
+}
+.footer-sections, .footer-contact, .footer-export {
+  text-align: left;
+}
+.footer-sections h3, .footer-contact h3, .footer-export h3 {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.footer-sections ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-sections ul li {
+  margin: 5px 0;
+}
+.footer-sections ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-sections ul li a:hover {
+  text-decoration: underline;
+}
+.footer-contact p {
+  margin: 5px 0;
+}
+.export-map {
+  max-width: 100px; 
+  height: auto; 
+  margin: 0 auto; 
+  display: block;
+}
+
+
+/* Para teléfonos*/
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .menu {
+    flex-direction: column;
+  }
+}
+
+/* Para tablets */
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}
