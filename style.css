@@ -31,10 +31,10 @@ header {
 .nav-bar ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-top: 200px;
+  padding-right: 500px;
   display: flex;
-  justify-content: center;
-  padding-left: 35px; 
+  justify-content: center; 
 }
 .nav-bar li {
   margin: 0 15px;
@@ -48,7 +48,7 @@ header {
   transition: background-color 0.3s ease;
 }
 .nav-bar a:hover {
-  background-color: #084080; /* Color de fondo al pasar el mouse */
+  background-color: #084080; 
 }
 /*Index*/
 section {
@@ -85,23 +85,23 @@ color: #000000;
   border-radius: 5px;
 }
 .carrusel-text h3 {
-  font-size: 2.5rem; /*tamaño del título */
-  font-weight: bold; /*grosor del texto */
-  color: #040404; /*color del texto*/
+  font-size: 2.5rem; 
+  font-weight: bold; 
+  color: #040404; 
 }
 .carrusel-text p {
-  font-size: 1.2rem; /*tamaño de la letra del párrafo */
-  line-height: 1; /*espacia entre líneas */
-  color: #000000; /*color del texto*/
+  font-size: 1.2rem; 
+  line-height: 1; 
+  color: #000000; 
 }
 .boton {
   font-size: 1rem;
-  padding: 10px 10px; /*tamaño del botón */
-  background-color: #5373d2; /*color del botón */
+  padding: 10px 10px; 
+  background-color: #5373d2; 
   color: rgb(0, 0, 0);
   text-decoration: none;
   border-radius: 5px;
-  margin-top: 10px; /*espacion boton texto*/
+  margin-top: 10px; 
   display: inline-block;
 }
 button.prev, button.next {
@@ -177,15 +177,15 @@ button.next {
 } 
 .boton-producto, .boton-ver-mas { 
   display: inline-block; 
-  margin: 10px 5px; /* Ajusta el espacio entre los botones */ 
+  margin: 10px 5px; 
   padding: 10px 20px; 
-  background-color: #007acc; /* Color del botón */ 
+  background-color: #007acc;  
   color: white; 
   text-decoration: none; 
   border-radius: 5px; 
 } 
 .boton-producto:hover, .boton-ver-mas:hover { 
-  background-color: #005fa3; /* Color del botón al pasar el ratón */
+  background-color: #005fa3; 
 }
 
 
@@ -377,9 +377,9 @@ h3 {
 /*Introduccion en clientes*/ 
 .introduction {
   display: flex;
-  flex-direction: row; /* Cambiamos de columna a fila */
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between; /* Espacio uniforme entre texto y video */
+  justify-content: space-between; 
   gap: 20px;
   padding: 20px;
   background-color: #f9f9f9;
@@ -387,7 +387,7 @@ h3 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 1200px;
   margin: 0 auto;
-  text-align: left; /* Mantén alineado a la izquierda */
+  text-align: left; 
 }
 
 .introduction h2 {
@@ -400,37 +400,21 @@ h3 {
   color: #333333;
   font-size: 1em;
   line-height: 1.6;
-  max-width: 600px; /* Ajustamos el ancho máximo del texto */
+  max-width: 600px; 
 }
 
 .container {
-  flex: 1; /* El video también ocupa espacio proporcional */
+  flex: 1; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .imagen-superior video {
-  max-width: 100%; /* Escala el video dentro de su contenedor */
-  height: auto; /* Mantiene la proporción */
-  max-width: 640px; /* Limita el ancho máximo del video */
+  max-width: 100%; 
+  height: auto; 
+  max-width: 640px;
   border: none;
-}
-
-/* Ajustes responsivos para pantallas pequeñas */
-@media (max-width: 768px) {
-  .introduction {
-    flex-direction: column; /* Cambiamos a columna en pantallas pequeñas */
-    text-align: center; /* Centra el texto y el video */
-  }
-
-  .introduction p {
-    max-width: 100%; /* Permite que el texto ocupe todo el ancho */
-  }
-
-  .imagen-superior video {
-    max-width: 100%; /* El video se ajusta al ancho del contenedor */
-  }
 }
 
 /*Contacto*/
@@ -517,30 +501,30 @@ form input[type="submit"]:hover {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Ajusta el ancho según sea necesario */
-  text-align: left; /* Alineación a la izquierda */
+  width: 300px; 
+  text-align: left; 
   display: flex;
   align-items: center;
-  gap: 15px; /* Espacio entre el icono y el texto */
+  gap: 15px; 
 }
 .icon-container {
-  flex-shrink: 0; /* Evita que el icono se reduzca */
+  flex-shrink: 0;
 }
 .icon-background {
-  background-color: #294cac; /* Color de fondo del círculo */
-  border-radius: 50%; /* Hace que el fondo sea circular */
-  width: 70px; /* Ancho del círculo */
-  height: 70px; /* Altura del círculo */
+  background-color: #294cac;
+  border-radius: 50%; 
+  width: 70px; 
+  height: 70px; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .contact-icon {
-  width: 25px; /* Ajusta el tamaño del icono según sea necesario */
+  width: 25px; 
   height: auto;
 }
 .contact-info {
-  flex-grow: 1; /* Permite que el texto crezca si es necesario */
+  flex-grow: 1;
 }
 h1 {
   font-size: 2em;
@@ -615,19 +599,33 @@ footer {
   display: none;
 }
 
-/* Para dispositivos pequeños (teléfonos) */
+/* Media Query para pantallas de ancho máximo 768px*/
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
+  .container {
+      flex-direction: column;
+      align-items: center;
   }
-  .menu {
-    flex-direction: column;
+
+  .introduction, .imagen-superior {
+      max-width: 100%;
+  }
+
+  .introduction p {
+      text-align: center;
   }
 }
 
-/* Para dispositivos medianos (tabletas) */
-@media (max-width: 1024px) {
-  .sidebar {
-    display: none;
+/* Media Query para pantallas de ancho máximo 480px*/
+@media (max-width: 480px) {
+  .introduction h2 {
+      font-size: 1.5rem; /* Ajusta el tamaño del título */
+  }
+
+  .introduction p {
+      font-size: 1rem; /* Ajusta el tamaño del texto */
+  }
+
+  .imagen-superior video {
+      width: 100%; /* Asegura que el video se ajuste al ancho del contenedor */
   }
 }

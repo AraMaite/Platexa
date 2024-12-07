@@ -1,57 +1,57 @@
-* {
-  font-family: "Hind Siliguri", sans-serif; 
-  margin: 0;  
-  padding: 0;  
-  box-sizing: border-box;  
-}  
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
+  font-family:"Hind Siliguri", sans-serif;
   margin: 0;
   padding: 0;
-  font-family: "Lato",Arial, sans-serif;
-  background-color: #ffffff; /* Fondo blanco */
-  color: #000000; /* Texto negro */
+  background-color: #c0bdbdcc;
 }
+/* Estilos del encabezado */
 header {
-  background: #06184d;
-  padding: 10px 0;
-  margin: 0;
-  text-align: left; /*logo a la izquierda */
-}
-.nav-bar {  
-  background-color: #ffffff; /*color del rectangulo*/  
-  border-top: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  padding: 15px 0;
-  box-shadow: 0 4px 6px rgba rgba(0, 0, 0, 0.1); /*sombra*/
-}  
-.nav-bar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+  background-color: #192c64;
   padding: 0;
-} 
-.nav-bar li {    
-  margin: 0 25px;  
-}  
+}
+.logo-banner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  width: 70%;
+  height: auto;
+  max-height: 300px;
+}
+/* Estilo de la barra de navegación */
+.nav-bar {
+  background-color: #192c64;
+}
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 200px;
+  padding-right: 500px;
+  display: flex;
+  justify-content: center; 
+}
+.nav-bar li {
+  margin: 0 15px;
+}
 .nav-bar a {
-  color: #000000; /* Color del texto */
-  font-size: 25px;
-  font-weight: 500;
+  color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 1.5em; /* tamaño de la fuente */
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 .nav-bar a:hover {
-  color: #f0a500; /*color para el hover */
+  background-color: #084080; /* Color de fondo al pasar el mouse */
 }
-header .logo-banner .logo {  
-  width: 350px; /*el tamaño*/  
-  height: auto; 
-  max-width: none; 
-  background-color: #06184d; /*color de fondo */  
-  padding-left: 0px;    
-}
+
+/*PRODUCTOS*/
 #producto-detalle {
     display: flex;
     padding: 20px;
@@ -125,7 +125,7 @@ header .logo-banner .logo {
 #tabla-especificaciones th {
   background-color: #f2f2f2;
 }
-/*FOOTER*/
+/*Footer*/
 footer {
   background-color: #06184d;
   display: flex;
@@ -135,72 +135,98 @@ footer {
   color: #ffffff;
   font-family: Arial, sans-serif;
 }
-  footer div {
+.footer-logo, .footer-sections, .footer-contact, .footer-export {
+  margin: 10px;
+  padding: 10px;
   flex: 1;
-  margin: 0 15px;
-}
-.footer-logo {
-  flex: 1; 
-  display: flex;
-  justify-content: flex-start; 
-  align-items: center;
-  padding-left: 0; 
-  margin: 0; 
+  position: relative;
 }
 .footer-logo img {
-  max-width: 150px; 
-  height: auto;
-  margin: 0; 
-  padding: 0; 
-  position: relative; 
-  left: 0;  
-}
-.footer-sections, .footer-contact, .footer-export {
-  text-align: left;
-}
-.footer-sections h3, .footer-contact h3, .footer-export h3 {
-  font-size: 18px;
-  color: #000000;
-  margin-bottom: 10px;
+  display: block;
+  margin-left: 0; /* Pegado al borde izquierdo */
+  margin-right: auto;
+  width: 300px; /* Aumenta el tamaño del logo */
 }
 .footer-sections ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
-.footer-sections ul li {
+.footer-sections li {
   margin: 5px 0;
 }
-.footer-sections ul li a {
-  color: #ffffff;
+.footer-sections a {
+  color: white;
   text-decoration: none;
 }
-.footer-sections ul li a:hover {
-  text-decoration: underline;
-}
-.footer-contact p {
+.footer-contact p, 
+.footer-export h3 {
   margin: 5px 0;
 }
 .export-map {
-  max-width: 100px; 
-  height: auto; 
-  margin: 0 auto; 
+  width: 50px; /* Ajusta el tamaño del mapa */
+  height: auto;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-sections::after, 
+.footer-contact::after, 
+.footer-export::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: white;
+}
+.footer-sections:last-child::after, 
+.footer-contact:last-child::after, 
+.footer-export:last-child::after {
+  display: none;
 }
 
 
-/* Para teléfonos*/
+/* Media Query para pantallas de ancho máximo 768px*/
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
+  .container {
+      flex-direction: column;
+      align-items: center;
   }
-  .menu {
-    flex-direction: column;
+
+  .introduction, .imagen-superior {
+      max-width: 100%;
+  }
+
+  .introduction p {
+      text-align: center;
+  }
+
+  .imagen-superior video {
+    max-width: 100%; /* El video se ajusta al ancho del contenedor */
   }
 }
 
-/* Para tablets */
-@media (max-width: 1024px) {
-  .sidebar {
-    display: none;
+
+@media (min-width: 1025px) { 
+  
+  .introduction, .imagen-superior { 
+      max-width: 45%; 
+  }
+}
+
+
+/* Media Query para pantallas de ancho máximo 480px*/
+@media (max-width: 480px) {
+  .introduction h2 {
+      font-size: 1.5rem; /* Ajusta el tamaño del título */
+  }
+
+  .introduction p {
+      font-size: 1rem; /* Ajusta el tamaño del texto */
+  }
+
+  .imagen-superior video {
+      width: 100%; /* Asegura que el video se ajuste al ancho del contenedor */
   }
 }
