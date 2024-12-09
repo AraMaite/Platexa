@@ -34,80 +34,81 @@
                 </video>
                 <div class="overlay-text">
                     <h1>BERPLAST</h1>
-                    <p>Empresa líder en fabricación de bolsas plásticas para la industria farmacéutica, veterinaria y cosmética.</p>
+                    <p>Somos los mejores fabricantes de bolsas plásticas para la industria farmacéutica, veterinaria y cosmética.</p>
                     <a href="/pages/contacto.html" class="btn-contacto">Contacto</a>
                 </div>
             </div>
+            <section>
+                    <div class="carrusel">
+                    <div class="carrusel-item">
+                        <img src="/Img y Fondos/diseño personalizado.png" alt="Producto 0">
+                        <div class="carrusel-texto">
+                            <h2>CALIDAD</h2>
+                            <p>Nuestros productos son meticulosamente creados, con los mejores materiales y el más dedicado proceso</p>
+                            <a href="/pages/clientes.html" class="btn-ver-productos">Ver productos</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="/Img y Fondos/un click.png" alt="Producto 1">
+                        <div class="carrusel-texto">
+                            <h2>A DISTANCIA DE UN CLICK</h2>
+                            <p>Venta a minoristas y mayoristas de nuestros productos estrella con stock disponible y accesible al día.</p>
+                            <a href="/pages/productos.html" class="btn-ver-productos">Ver productos</a>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="/Img y Fondos/Cell.png" alt="Producto 2">
+                        <div class="carrusel-texto">
+                            <h2>DISEÑOS PERSONALIZADOS</h2>
+                            <p>Diseñamos a medida tu marca y te lo enviamos a cualquier parte del país</p>
+                            <a href="/pages/contacto.html" class="btn-ver-productos">Contactate</a>
+                        </div>
+                    </div>
+                    <!-- Indicadores de carrusel --> 
+                    <div class="indicadores"> 
+                        <span class="indicador" onclick="goToSlide(0)"></span> 
+                        <span class="indicador" onclick="goToSlide(1)"></span> 
+                        <span class="indicador" onclick="goToSlide(2)"></span>
+                    </div>
+                </div>
+            </section>
             
-        <div class="carrusel">
-            <div class="carrusel-item">
-                <img src="/Img y Fondos/un click.png" alt="Producto 1">
-                <div class="carrusel-texto">
-                    <h2>A DISTANCIA DE UN CLICK</h2>
-                    <p>Venta a minoristas de nuestros productos estrella con stock disponible y accesible al día.</p>
-                    <a href="/pages/productos.html" class="btn-ver-productos">Ver productos</a>
-                </div>
-            </div>
-            <div class="carrusel-item">
-                <img src="/Img y Fondos/icono.png" alt="Producto 1">
-                <div class="carrusel-texto">
-                    <h2>DISEÑOS PERSONALIZADOS</h2>
-                    <p>Diseñamos a medida tu marca y la mandamos a todo el pais</p>
-                    <a href="/pages/contacto.html" class="btn-ver-productos">Contactate</a>
-                </div>
-            </div>
-            <div class="carrusel-item">
-                <img src="/Img y Fondos/diseño personalizado.png" alt="Producto 1">
-                <div class="carrusel-texto">
-                    <h2>CALIDAD</h2>
-                    <p>Nuestros productos son meticulosamente creados, con los mejores material y el mas dedicado proceso</p>
-                    <a href="/pages/clientes.html" class="btn-ver-productos">Ver productos</a>
-                </div>
-            </div> 
-            <!-- Indicadores de carrusel --> 
-            <div class="indicadores"> 
-                <span class="indicador" onclick="goToSlide(0)"></span> 
-                <span class="indicador" onclick="goToSlide(1)"></span> 
-                <span class="indicador" onclick="goToSlide(2)"></span>
-            </div>
-
-        <script>
-            let currentSlide = 0;
-            const slides = document.querySelectorAll('.carrusel-item');
-            const indicators = document.querySelectorAll('.indicador');
-        
-            function showSlide(index) {
-                if (index >= slides.length) {
-                    currentSlide = 0;
-                } else if (index < 0) {
-                    currentSlide = slides.length - 1;
-                } else {
-                    currentSlide = index;
+            <script>
+                let currentSlide = 0;
+                const slides = document.querySelectorAll('.carrusel-item');
+                const indicators = document.querySelectorAll('.indicador');
+            
+                function showSlide(index) {
+                    if (index >= slides.length) {
+                        currentSlide = 0;
+                    } else if (index < 0) {
+                        currentSlide = slides.length - 1;
+                    } else {
+                        currentSlide = index;
+                    }
+                    slides.forEach((slide, i) => {
+                        slide.style.transform = `translateX(${100 * (i - currentSlide)}%)`;
+                    });
+                    indicators.forEach((indicator, i) => {
+                        indicator.classList.toggle('active', i === currentSlide);
+                    });
                 }
-                slides.forEach((slide, i) => {
-                    slide.style.transform = `translateX(${100 * (i - currentSlide)}%)`;
-                });
-                indicators.forEach((indicator, i) => {
-                    indicator.classList.toggle('active', i === currentSlide);
-                });
-            }
-        
-            function showPrevSlide() {
-                showSlide(currentSlide - 1);
-            }
-        
-            function showNextSlide() {
-                showSlide(currentSlide + 1);
-            }
-        
-            function goToSlide(index) {
-                showSlide(index);
-            }
-        
-            showSlide(currentSlide);
-        </script>
-        
-
+            
+                function showPrevSlide() {
+                    showSlide(currentSlide - 1);
+                }
+            
+                function showNextSlide() {
+                    showSlide(currentSlide + 1);
+                }
+            
+                function goToSlide(index) {
+                    showSlide(index);
+                }
+            
+                showSlide(currentSlide);
+            </script>
+            
     </div>
         <section class="servicios">
             <div class="servicio">
@@ -128,25 +129,25 @@
         </section>
         <section id="productos-destacados">
             <h1>Productos destacados</h1>
-            <div class="producto">
+            <div class="productoindex">
                 <img src="/productos/Hielo.png" alt="Producto 1">
                 <h3>Bolsas para Hielo</h3>
                 <a href="pages/productos.html" class="boton-producto">Ver precios</a>
                 <a href="/pages/contacto.html" class="boton-ver-mas">Ver más</a>
             </div>
-            <div class="producto">
+            <div class="productoindex">
                 <img src="/productos/Leña.png" alt="Producto 2">
                 <h3>Bolsas para Carbon y Leña</h3>
                 <a href="pages/productos.html" class="boton-producto">Ver precios</a>
                 <a href="/pages/contacto.html" class="boton-ver-mas">Ver más</a>  
             </div>
-            <div class="producto">
+            <div class="productoindex">
                 <img src="/productos/Residuos.png" alt="Producto 4">
                 <h3>Bolsas de Residuos Reforsadas</h3>
                 <a href="pages/productos.html" class="boton-producto">Ver precios</a>
                 <a href="/pages/contacto.html" class="boton-ver-mas">Ver más</a>
             </div>
-            <div class="producto">
+            <div class="productoindex">
                 <img src="/productos/Camisera.png" alt="Producto 5">
                 <h3>Bolsas camisetas</h3>
                 <a href="/pageproductos/camisetas.html" class="boton-producto">Ver precios</a>
