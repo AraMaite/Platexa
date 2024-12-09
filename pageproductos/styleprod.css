@@ -215,7 +215,6 @@ footer {
   }
 }
 
-
 /* Media Query para pantallas de ancho máximo 480px*/
 @media (max-width: 480px) {
   .introduction h2 {

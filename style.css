@@ -31,7 +31,7 @@ header {
 .nav-bar ul {
   list-style-type: none;
   margin: 0;
-  padding-top: 200px;
+  padding-top: 190px;
   padding-right: 500px;
   display: flex;
   justify-content: center; 
@@ -51,78 +51,47 @@ header {
   background-color: #084080; 
 }
 /*Index*/
-section {
-padding: 20px;
-background-color: #ffffff;
-color: #000000;
-}
-.carrusel {
-  margin: 0;
-  padding: 0; 
-}
-.carrusel-inner {
-  display: flex;
-  transition: transform 0.10s ease-in-out;
-  width: 100%;
-}
-.carrusel-item {
-  min-width: 100%;
+.video-container {
   position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
 }
-.carrusel-item img {
+.video-container video {
   width: 100%;
   height: auto;
 }
-.carrusel-text {
-  position:absolute;
-  top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  color: rgb(5, 5, 5);
-  text-align: center;
-  background-color: none;
-  padding: 20px;
-  border-radius: 5px;
-}
-.carrusel-text h3 {
-  font-size: 2.5rem; 
-  font-weight: bold; 
-  color: #040404; 
-}
-.carrusel-text p {
-  font-size: 1.2rem; 
-  line-height: 1; 
-  color: #000000; 
-}
-.boton {
-  font-size: 1rem;
-  padding: 10px 10px; 
-  background-color: #5373d2; 
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px; 
-  display: inline-block;
-}
-button.prev, button.next {
+.overlay-text {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgb(7, 7, 7);
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 50px;
-  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  max-width: 90%;
 }
-button.prev { 
-  left: 10px; 
+.overlay-text h1 {
+  font-size: 2em;
+  margin: 0;
 }
-button.next { 
-  right: 10px; 
+.overlay-text p {
+  font-size: 1.2em;
+  margin: 10px 0;
 }
-
+.btn-contacto {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.btn-contacto:hover {
+  background-color: #0056b3;
+}
 
 /*SERVICIOS EN INDEX*/
 .servicios {
@@ -130,29 +99,36 @@ button.next {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+  gap: 0;
 }
 .servicio {
-  margin: 0 auto;
+  margin: 40px;
   text-align: center;
-  max-width: 120px; 
-  padding: 5px; 
-  border-radius: 5px;
+  max-width: 200px; 
+  padding: 20px; 
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s;
+}
+.servicio:hover { 
+  transform: scale(1.05); 
 }
 .servicio img {
-  max-width: 160px;
+  max-width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 .servicio h3 {
-  font-size: 2rem; 
-  margin-bottom: 4px;
+  font-size: 1.5rem; 
+  margin-bottom: 10px;
 }
 .servicio p {
   font-size: 1rem;
+  margin-bottom: 10px;
 }
-#productos-destacados {
-  padding: 20px;
-  text-align: center;
-}
+
 /*PRODUCTOS DESTACADOS*/
 #productos-destacados h1 {
   text-align: center;
@@ -166,6 +142,7 @@ button.next {
   gap: 5px;
 }
 .producto {
+  margin: 40px;
   background-color: #ffffff; 
   padding: 20px; 
   border-radius: 8px;
@@ -187,23 +164,112 @@ button.next {
 .boton-producto:hover, .boton-ver-mas:hover { 
   background-color: #005fa3; 
 }
+/*CARRUSEL DEL INDEX*/
+.carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.carrusel-item {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #6ed438cf, #57cf1635); /* Fondo degradado */
+  padding: 20px;
+  box-sizing: border-box;
+}
+.carrusel-item img {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.carrusel-texto {
+  width: 50%;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+.carrusel-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.carrusel-texto h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.carrusel-texto p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.btn-ver-productos {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #57cf16cf;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.btn-ver-productos:hover {
+  background-color: #88f14f98;
+}
+
+
+
+/* Indicadores de carrusel */
+.indicadores {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.indicador {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.indicador.active, .indicador:hover {
+  background-color: #717171;
+}
+
 
 
 /*FORMULARIO DE INDEX*/
 .form-container-index {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 400px;
-  width: 100%;
-  text-align: center;
-  margin: 10px;
-  margin-left: 550px;
-} 
-.form-container-index h1 {
+  max-width: 800px;
+  margin: 10px auto; 
+}
+.form-container-index img {
+  max-width: 40%; 
+  height: auto;
+  border-radius: 8px; 
+  margin: 0 auto;
+}
+.form-content {
+  flex: 1;
+  text-align: left; 
+}
+.form-content h1 {
   font-size: 24px;
-  margin: 20px 0;
+  margin-bottom: 20px;
+  text-align: center; 
 }
 form {
   width: 100%;
@@ -236,11 +302,11 @@ form input[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-
 /*PRODUCTOS*/
 #productosTienda {
   padding: 2rem;
   background-color: #f9f9f9;
+  text-align: center;
 }
 .titulo-seccion {
   text-align: center;
@@ -248,13 +314,13 @@ form input[type="submit"]:hover {
   font-size: 2rem;
   color: #333;
 }
-h3 { 
-  text-align: center;
+#productosTienda h3 { 
+  text-align: center; 
   margin-bottom: 20px; 
-  font-size: 1.5em;
+  font-size: 1.5em; 
   color: #494949; 
-  max-width: 800px; 
-  margin: 0 auto 20px auto; 
+  max-width: 800px;
+  margin: 0 auto 20px auto;
 }
   .filtros-productos {
   text-align: center;
@@ -274,28 +340,36 @@ h3 {
   color: #d9534f;
   border-bottom: 2px solid #d9534f;
 }
-.productos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5px;
+.productos-grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 5px; 
+  justify-content: center;
 }
 .producto {
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
+  margin: 5px;
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .producto:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 .imagen-producto {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto 1rem;
-  border-radius: 50%;
+  border-radius: 35%;
   overflow: hidden;
   background-color: #f1f1f1;
   display: flex;
@@ -544,21 +618,30 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 20px 40px 20px 0; 
+  padding: 20px 0px 20px 40px; 
   color: #ffffff;
-  font-family: Arial, sans-serif;
 }
-.footer-logo, .footer-sections, .footer-contact, .footer-export {
+.footer-logo, 
+.footer-sections, 
+.footer-contact, 
+.footer-export {
   margin: 10px;
   padding: 10px;
   flex: 1;
   position: relative;
 }
+.footer-logo { 
+  margin-left: 0; 
+  padding-left: 0;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
 .footer-logo img {
   display: block;
-  margin-left: 0; /* Pegado al borde izquierdo */
+  margin-left: 0; 
   margin-right: auto;
-  width: 300px; /* Aumenta el tamaño del logo */
+  width: 300px;
 }
 .footer-sections ul {
   list-style-type: none;
@@ -576,7 +659,7 @@ footer {
   margin: 5px 0;
 }
 .export-map {
-  width: 50px; /* Ajusta el tamaño del mapa */
+  width: 50px; 
   height: auto;
   display: block;
   margin-left: auto;

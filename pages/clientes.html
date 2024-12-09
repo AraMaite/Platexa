@@ -16,7 +16,7 @@
             <img class="logo" src="/Img y Fondos/Berplast.png" alt="logo">
             <nav class="nav-bar">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="/index.html">Inicio</a></li>
                     <li><a href="/pages/productos.html">Productos</a></li>
                     <li><a href="/pages/clientes.html">Clientes</a></li>
                     <li><a href="/pages/contacto.html">Contactos</a></li>
@@ -24,81 +24,86 @@
             </nav>
         </div>
     </header>
-    <div class="imagen-superior"> 
-        <section class="introduction">
-            <h2>Bienvenido a Berplast</h2>
-            <p>Con más de 10 años en la industria de la fabricación de bolsas plásticas, nos enorgullecemos de ofrecer productos de la más alta calidad. Nuestro compromiso con la sostenibilidad y la innovación nos ha permitido colaborar con los mejores en el sector. ¡Descubre cómo podemos ayudarte!</p>
-            <div class="container">
-                <div class="imagen-superior"> 
-                    <video width="640" height="360" autoplay loop muted>
-                        <source src="/Img y Fondos/recortado.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </section>
-        
-    </div> 
-    <div class="carousel">  
-        <div class="carousel-inner">  
-            <div class="carousel-item active">  
-                <img src="/Clientes Logos/Bola_de_oro.png" alt="Cliente 1">  
-            </div>  
-            <div class="carousel-item">  
-                <img src="/Clientes Logos/Bulus.png" alt="Cliente 2">  
-            </div>  
-            <div class="carousel-item">  
-                <img src="/Clientes Logos/CNB.png" alt="Cliente 3">  
-            </div>  
-            <div class="carousel-item">  
-                <img src="/Clientes Logos/FF.png" alt="Cliente 4">  
-            </div>  
-            <div class="carousel-item">  
-                <img src="/Clientes Logos/Laboratorios Plasticos.png" alt="Cliente 5">  
-            </div>  
-            <div class="carousel-item">  
-                <img src="/Clientes Logos/Materiales Berisso.png" alt="Cliente 6">  
-            </div>  
-            <div class="carousel-item">  
-                <img src="/Clientes Logos/Miwok.png" alt="Cliente 7">  
-            </div>  
-            <div class="carousel-item">  
-                <img src="/Clientes Logos/Parma.jpg" alt="Cliente 8">  
-            </div>    
-            <div class="carousel-item">  
-                <img src="/Clientes Logos/Radiac.png" alt="Cliente 10">  
-            </div>  
-            <div class="carousel-item">  
-                <img src="/Clientes Logos/Weizur.png" alt="Cliente 11">  
-            </div>  
-            <div class="carousel-item">  
-                <img src="/Clientes Logos/Zoovac.png" alt="Cliente 11">  
-            </div>  
+    <main>
+        <div class="imagen-superior"> 
+            <img src="/Img y Fondos/encabezado de clientes.png" alt="Imagen Grande">
         </div> 
-    </div>
-    <script>
-        let currentIndex = 0;
-        const items = document.querySelectorAll('.carousel-item');
-        const totalItems = items.length;
-        
-        function showNextSlide() {
-            items[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % totalItems;
-            items[currentIndex].classList.add('active');
-            updateCarouselTransform();
-        }
-        
-        function updateCarouselTransform() {
-            const carouselInner = document.querySelector('.carousel-inner');
-            const transformValue = `translateX(-${currentIndex * 100}%)`;
-            carouselInner.style.transform = transformValue;
-        }
-        
-        setInterval(showNextSlide, 3000); // Cambia de imagen cada 3 segundos
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            updateCarouselTransform();
-        });
-        </script>
+            <div class="imagen-superior"> 
+                <section class="introduction">
+                    <h2>Bienvenido a Berplast</h2>
+                    <p>Con más de 10 años en la industria de la fabricación de bolsas plásticas, nos enorgullecemos de ofrecer productos de la más alta calidad. Nuestro compromiso con la sostenibilidad y la innovación nos ha permitido colaborar con los mejores en el sector. ¡Descubre cómo podemos ayudarte!</p>
+                    <div class="container">
+                        <div class="imagen-superior"> 
+                            <video width="640" height="360" autoplay loop muted>
+                                <source src="/Img y Fondos/recortado.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </section>
+                
+            </div> 
+            <div class="carousel">  
+                <div class="carousel-inner">  
+                    <div class="carousel-item active">  
+                        <img src="/Clientes Logos/Bola_de_oro.png" alt="Cliente 1">  
+                    </div>  
+                    <div class="carousel-item">  
+                        <img src="/Clientes Logos/Bulus.png" alt="Cliente 2">  
+                    </div>  
+                    <div class="carousel-item">  
+                        <img src="/Clientes Logos/CNB.png" alt="Cliente 3">  
+                    </div>  
+                    <div class="carousel-item">  
+                        <img src="/Clientes Logos/FF.png" alt="Cliente 4">  
+                    </div>  
+                    <div class="carousel-item">  
+                        <img src="/Clientes Logos/Laboratorios Plasticos.png" alt="Cliente 5">  
+                    </div>  
+                    <div class="carousel-item">  
+                        <img src="/Clientes Logos/Materiales Berisso.png" alt="Cliente 6">  
+                    </div>  
+                    <div class="carousel-item">  
+                        <img src="/Clientes Logos/Miwok.png" alt="Cliente 7">  
+                    </div>  
+                    <div class="carousel-item">  
+                        <img src="/Clientes Logos/Parma.jpg" alt="Cliente 8">  
+                    </div>    
+                    <div class="carousel-item">  
+                        <img src="/Clientes Logos/Radiac.png" alt="Cliente 10">  
+                    </div>  
+                    <div class="carousel-item">  
+                        <img src="/Clientes Logos/Weizur.png" alt="Cliente 11">  
+                    </div>  
+                    <div class="carousel-item">  
+                        <img src="/Clientes Logos/Zoovac.png" alt="Cliente 11">  
+                    </div>  
+                </div> 
+            </div>
+            <script>
+                let currentIndex = 0;
+                const items = document.querySelectorAll('.carousel-item');
+                const totalItems = items.length;
+                
+                function showNextSlide() {
+                    items[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % totalItems;
+                    items[currentIndex].classList.add('active');
+                    updateCarouselTransform();
+                }
+                
+                function updateCarouselTransform() {
+                    const carouselInner = document.querySelector('.carousel-inner');
+                    const transformValue = `translateX(-${currentIndex * 100}%)`;
+                    carouselInner.style.transform = transformValue;
+                }
+                
+                setInterval(showNextSlide, 3000); // Cambia de imagen cada 3 segundos
+                
+                document.addEventListener('DOMContentLoaded', () => {
+                    updateCarouselTransform();
+                });
+                </script>
+    </main>    
     <footer>
         <div class="footer-logo">
             <img src="/Img y Fondos/Berplast LOGO.png" alt="Logo" class="logo-reducida">
