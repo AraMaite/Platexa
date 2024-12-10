@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="/Img y Fondos/icono.png" type="image/icon">
-    <link rel="shortcut icon" href="/Img y Fondos/icono.png" type="image/icon">
+    <link rel="icon" href="/Img y Fondos/Icono.png" type="image/icon">
+    <link rel="shortcut icon" href="/Img y Fondos/Icono.png" type="image/icon">
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="">
     <link rel="stylesheet" href="/style.css"/>
     <title>BerPlast</title>
 </head>
@@ -34,82 +33,10 @@
                 </video>
                 <div class="overlay-text">
                     <h1>BERPLAST</h1>
-                    <p>Somos los mejores fabricantes de bolsas plásticas para la industria farmacéutica, veterinaria y cosmética.</p>
+                    <p>Somos los mejores fabricantes de bolsas plásticas para todos los tipos de industrias como las alimenticias, farmaceuticas y veterinaria entre otras</p>
                     <a href="/pages/contacto.html" class="btn-contacto">Contacto</a>
                 </div>
             </div>
-            <section>
-                    <div class="carrusel">
-                    <div class="carrusel-item">
-                        <img src="/Img y Fondos/diseño personalizado.png" alt="Producto 0">
-                        <div class="carrusel-texto">
-                            <h2>CALIDAD</h2>
-                            <p>Nuestros productos son meticulosamente creados, con los mejores materiales y el más dedicado proceso</p>
-                            <a href="/pages/clientes.html" class="btn-ver-productos">Ver productos</a>
-                        </div>
-                    </div>
-                    <div class="carrusel-item">
-                        <img src="/Img y Fondos/un click.png" alt="Producto 1">
-                        <div class="carrusel-texto">
-                            <h2>A DISTANCIA DE UN CLICK</h2>
-                            <p>Venta a minoristas y mayoristas de nuestros productos estrella con stock disponible y accesible al día.</p>
-                            <a href="/pages/productos.html" class="btn-ver-productos">Ver productos</a>
-                        </div>
-                    </div>
-                    <div class="carrusel-item">
-                        <img src="/Img y Fondos/Cell.png" alt="Producto 2">
-                        <div class="carrusel-texto">
-                            <h2>DISEÑOS PERSONALIZADOS</h2>
-                            <p>Diseñamos a medida tu marca y te lo enviamos a cualquier parte del país</p>
-                            <a href="/pages/contacto.html" class="btn-ver-productos">Contactate</a>
-                        </div>
-                    </div>
-                    <!-- Indicadores de carrusel --> 
-                    <div class="indicadores"> 
-                        <span class="indicador" onclick="goToSlide(0)"></span> 
-                        <span class="indicador" onclick="goToSlide(1)"></span> 
-                        <span class="indicador" onclick="goToSlide(2)"></span>
-                    </div>
-                </div>
-            </section>
-            
-            <script>
-                let currentSlide = 0;
-                const slides = document.querySelectorAll('.carrusel-item');
-                const indicators = document.querySelectorAll('.indicador');
-            
-                function showSlide(index) {
-                    if (index >= slides.length) {
-                        currentSlide = 0;
-                    } else if (index < 0) {
-                        currentSlide = slides.length - 1;
-                    } else {
-                        currentSlide = index;
-                    }
-                    slides.forEach((slide, i) => {
-                        slide.style.transform = `translateX(${100 * (i - currentSlide)}%)`;
-                    });
-                    indicators.forEach((indicator, i) => {
-                        indicator.classList.toggle('active', i === currentSlide);
-                    });
-                }
-            
-                function showPrevSlide() {
-                    showSlide(currentSlide - 1);
-                }
-            
-                function showNextSlide() {
-                    showSlide(currentSlide + 1);
-                }
-            
-                function goToSlide(index) {
-                    showSlide(index);
-                }
-            
-                showSlide(currentSlide);
-            </script>
-            
-    </div>
         <section class="servicios">
             <div class="servicio">
                 <img src="/Img y Fondos/Calidad.png" alt="Calidad">
@@ -188,6 +115,7 @@
         <div class="footer-contact">
             <h3>Contacto</h3>
             <p> Calle Entre Muros y Marsella,Edificio 55, C.P. 1923, Berisso, Provincia de Buenos Aires.</p>
+            <p> 461-1737</p>
             <p> +54 9 0221-2020035</p>
             <p> administracion@berplast.com</p>
         </div> 
