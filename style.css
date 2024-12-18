@@ -19,10 +19,10 @@ header {
   padding: 0;
 }
 .logo {
-  width: 113%;
+  width: 100%;
   height: auto;
-  max-height: 280px; /*largo de la img*/
-  margin-bottom: -54px;
+  max-height: 250px; /*largo de la img*/
+  margin-bottom: -50px;
 }
 /* Estilo de la barra de navegación */
 .nav-bar {
@@ -234,25 +234,31 @@ form input[type="submit"]:hover {
 }
 
 /*PRODUCTOS*/
-#productosTienda {
-  padding: 2rem;
-  background-color: #f9f9f9;
-  text-align: center;
+.imagen-superior {
+  position: relative; /* Permite posicionar elementos absolutos dentro */
+  display: inline-block;
+  width: 100%; /* Ajusta al ancho del contenedor */
 }
-.titulo-seccion {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: #333;
+
+.imagen-superior img {
+  width: 100%; /* Imagen ajustada al contenedor */
+  height: auto; /* Mantiene proporción */
 }
-#productosTienda h3 { 
-  text-align: center; 
-  margin-bottom: 20px; 
-  font-size: 1.5em; 
-  color: #494949; 
-  max-width: 800px;
-  margin: 0 auto 20px auto;
+
+.imagen-superior .texto-sobre-imagen {
+  position: absolute;
+  top: 50%; /* Centra el texto verticalmente */
+  left: 50%; /* Centra el texto horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el centro del texto */
+  color: white; /* Color del texto */
+  font-size: 1rem; /* Tamaño del texto */
+  font-weight: bold;
+  text-align: center; /* Centra el texto */
+  background-color: rgba(0, 0, 0, 0.142); /* Fondo semitransparente para mejor legibilidad */
+  padding: 10px 20px; /* Espaciado alrededor del texto */
+  border-radius: 5px; /* Bordes redondeados */
 }
+
   .filtros-productos {
   text-align: center;
   margin-bottom: 2rem;
@@ -542,7 +548,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 20px 0px 20px 40px; 
+  padding: 8px 8px; 
   color: #c6bebe83;
 }
 .footer-logo, 
@@ -554,23 +560,24 @@ footer {
   flex: 1;
   position: relative;
 }
-.footer-logo { 
-  margin-left: 0; 
-  padding-left: 0;
-  flex: 1;
+.footer-logo {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  padding: 50px; 
 }
-.footer-logo img {
-  display: block;
-  margin-left: 0; 
-  margin-right: auto;
-  width: 300px;
+.logo-reducida {
+  max-width: 200px; 
+  height: auto; 
 }
 .footer-sections {
   width: 100%;
   padding: 10px;
   background-color: #06184d;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  text-align: center; 
 }
   .footer-sections ul {
   list-style-type: none;
@@ -614,7 +621,7 @@ footer {
 }
 
 /* Dispositivos pequeños (teléfonos) */
-@media (min-width: 570px) and (max-width: 768px) {
+@media (min-width: 360px) and (max-width: 956px) {
   .logo {
     width: 100%;
     max-height: 200px;
@@ -629,99 +636,72 @@ footer {
   .nav-bar li {
     margin: 10px 0;
   }
-
   .video-container {
     height: auto;
   }
-
   .overlay-text h1 {
     font-size: 2em;
   }
-
   .overlay-text p {
     font-size: 1em;
   }
-
   .servicios {
     max-width: 90%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 auto;
-    gap: 20px;
   } 
-  
-  .productos-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .producto, .servicio {
-    max-width: 90%;
-    margin: 20px 0;
-  }
-
   .contact-container {
     flex-direction: column;
     gap: 10px;
   }
-
-  .footer-logo img {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-  }
-}
-
-/* Dispositivos medianos tablet */
-@media (min-width: 576px) and (max-width: 768px) {
-  .logo {
-    max-height: 250px;
-  }
-  .nav-bar ul {
-    padding-left: 0;
-    justify-content: center;
-  }
-  .nav-bar li {
-    margin: 10px 15px;
-  }
-  .carrusel-texto h2 {
-    font-size: 1.8rem;
-  }
-  .servicios, .productos-grid {
-    grid-template-columns: repeat(2, 1fr);
+  #productos-destacados {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
   }
   .productoindex {
-    max-width: 200px;
+    width: 100%; /* Asegura que cada producto ocupe todo el ancho de su columna */
   }
-  .form-container-index {
-    flex-direction: column;
-    align-items: center;
+  .imagen-superior {
+    position: relative;
+    width: 100%;
+    height: auto; /* Asegura que la imagen no pierda proporción */
   }
-  .footer-contact, .footer-export {
-    text-align: center;
+  .imagen-superior .texto-sobre-imagen {
+    top: 40%; /* Ajusta el texto un poco más arriba */
+    font-size: 1.2rem; /* Reduce el tamaño del texto */
+    padding: 8px 15px; /* Ajusta el espaciado del fondo del texto */
+    line-height: 1.4; /* Mejora la legibilidad en pantallas más pequeñas */
+  }
+  .imagen-superior img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  footer {
+    flex-direction: column; 
+    align-items:center; 
+  }
+  .footer-logo {
+    order: 1; 
   }
   .footer-sections {
+    order: 2;
+  }
+  .footer-contact {
+    order: 3;
+  }
+  .footer-export {
+    order: 4;
+  }
+  .footer-contact, .footer-export, .footer-sections {
+    flex: 1 1 100%; 
     text-align: center; 
   }
-  .footer-sections ul {
-    padding: 0;
-    text-align: center;
+  .export-map {
+    max-width: 80px;
   }
-  .footer-sections li {
-    margin: 5px 0; 
-  }
-  .footer-sections a {
-    display: block; 
-    padding: 10px; 
-  }
-  .footer-contact { 
-    text-align: center; 
-    padding: 20px; } 
-  .footer-contact p { 
-    margin: 10px 0; 
-  }
+  .footer-contact {
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff; 
 }
+}
+
 
 /* Media Query para pantallas de ancho máximo 992px*/
 @media (min-width: 768px) and (max-width: 992px) {
@@ -775,11 +755,13 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .productoindex {
-    max-width: 240px;
-  }
-
   .footer-logo img {
     width: 300px;
   }
+  .footer-logo {
+    padding: 30px;
+}
+.logo-reducida {
+    max-width: 120px;
+}
 }
