@@ -241,41 +241,22 @@ form input[type="submit"]:hover {
 }
 
 .imagen-superior img {
-  width: 100%; /* Imagen ajustada al contenedor */
-  height: auto; /* Mantiene proporción */
+  width: 100%;
+  height: auto;
 }
 
 .imagen-superior .texto-sobre-imagen {
   position: absolute;
-  top: 50%; /* Centra el texto verticalmente */
-  left: 50%; /* Centra el texto horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta el centro del texto */
-  color: white; /* Color del texto */
-  font-size: 1rem; /* Tamaño del texto */
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  color: white; 
+  font-size: 1.2rem; 
   font-weight: bold;
   text-align: center; /* Centra el texto */
   background-color: rgba(0, 0, 0, 0.142); /* Fondo semitransparente para mejor legibilidad */
   padding: 10px 20px; /* Espaciado alrededor del texto */
   border-radius: 5px; /* Bordes redondeados */
-}
-
-  .filtros-productos {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.filtro {
-  margin: 0 0.5rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  border-bottom: 2px solid transparent;
-  padding: 0.5rem;
-  transition: all 0.3s ease;
-}
-.filtro.activo,
-.filtro:hover {
-  color: #d9534f;
-  border-bottom: 2px solid #d9534f;
 }
 .productos-grid { 
   display: grid; 
@@ -286,36 +267,36 @@ form input[type="submit"]:hover {
 .producto {
   text-align: center;
   padding: 0.5rem;
-  margin: 5px;
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 200px;
+  width: 300px;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 .producto:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 .imagen-producto {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 3200px;
   margin: 0 auto 1rem;
-  border-radius: 35%;
   overflow: hidden;
-  background-color: #f1f1f1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .imagen-producto img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 180px;
+  max-height: 180px;
 }
 .producto h3 {
   font-size: 1.2rem;
