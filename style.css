@@ -21,7 +21,7 @@ header {
 .logo {
   width: 100%;
   height: auto;
-  max-height: 250px; /*largo de la img*/
+  max-height: 200px; /*largo de la img*/
   margin-bottom: -50px;
 }
 /* Estilo de la barra de navegación */
@@ -139,38 +139,56 @@ header {
   margin-bottom: 20px;
   width: 100%;
 }
+
 #productos-destacados {
   display: flex;
   flex-wrap: wrap;  
   justify-content: space-between;
   gap: 5px;
 }
+
 .productoindex {
-  margin: 40px;
+  margin: 20px;
   text-align: center;
   max-width: 250px; 
-  padding: 20px; 
+  padding: 10px; 
   border-radius: 10px;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 .productoindex:hover { 
   transform: scale(1.05); 
 }
+
 .productoindex img {
-  max-width: 100%; height: auto; 
+  max-width: 80%; 
+  height: auto; 
+  flex-grow: 1;
 } 
+
+.boton-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
 .boton-producto, .boton-ver-mas { 
-  display: inline-block; 
-  margin: 10px 5px; 
-  padding: 10px 20px; 
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 10px; 
   background-color: #007acc;  
   color: white; 
   text-decoration: none; 
   border-radius: 5px; 
 } 
+
 .boton-producto:hover, .boton-ver-mas:hover { 
   background-color: #005fa3; 
 }
@@ -368,7 +386,7 @@ form input[type="submit"]:hover {
   margin: auto; 
   display: block; 
 } 
-/*Introduccion en clientes*/ 
+/*CLIENTES*/ 
 .introduction {
   display: flex;
   flex-direction: row;
@@ -386,7 +404,7 @@ form input[type="submit"]:hover {
 .introduction p {
   color: #333333;
   font-size: 1em;
-  line-height: 1.6;
+  line-height: 2rem;
   max-width: 600px; 
 }
 .container {
@@ -401,8 +419,43 @@ form input[type="submit"]:hover {
   max-width: 640px;
   border: none;
 }
+.introduction1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.introduction1 p {
+  flex: 1;
+  max-width: 600px;
+  color: #333333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-left: 20px;
+}
+.container1 {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagen-superior1 video {
+  max-width: 100%; 
+  height: auto; 
+  max-width: 640px;
+  border: none;
+}
 
-/*Contacto*/
+/*CONTACTO*/
 .contact-container {
   display: flex;
   justify-content: space-between;
@@ -573,9 +626,12 @@ footer {
   text-decoration: none;
   display: block;
 }
-.footer-contact p, 
+.footer-contact p  {
+  margin: 5px 0;
+}
 .footer-export h3 {
   margin: 5px 0;
+  text-align: center;
 }
 .export-map {
   width: 50px; 
