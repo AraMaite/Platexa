@@ -11,46 +11,45 @@ body {
 }
 /* Estilos del encabezado */
 header {
-  background-color: #192c64;
-  padding: 0;
+  background: linear-gradient(to right,#db8310, #FFD700, #dddada);
+  padding: 20px;
+  text-align: center;
 }
 .logo-banner {
-  text-align: center;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .logo {
-  width: 100%;
-  height: auto;
-  max-height: 254px; /*largo de la img*/
-  margin-bottom: -40px;
+  height: 80px;
 }
-/* Estilo de la barra de navegación */
+.palabras {
+  height: 60px;
+  margin: 0 auto;
+  margin-left: 485px;
+}
 .nav-bar {
-  background-color: #192c64;
-  margin-top: -10px;
-  text-align: center; /* Centrar el contenido del nav */
-  padding-left: 70px;
+  margin-top: 10px;
 }
 .nav-bar ul {
-  list-style-type: none;
-  margin-bottom: 15px;
-  display: inline-flex;
+  list-style: none;
+  display: flex;
   justify-content: center;
-  width: 500px;
+  gap: 30px;
 }
 .nav-bar li {
-  margin: 0 30px;
+  margin-top: 10px;
 }
 .nav-bar a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5em; /* tamaño de la fuente */
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 5px; 
+    transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
 }
 .nav-bar a:hover {
-  background-color: #376599;
+  border-radius: 10px;
+    border: 2px solid #FFF;
 }
 /*PRODUCTOS*/
 #producto-detalle { 
@@ -98,14 +97,14 @@ header {
 .btn-especificaciones { 
   display: inline-block;
   padding: 10px 20px; 
-  background-color: #084080; 
-  color: white; 
+  background-color: #FFD700; 
+  color: rgb(10, 10, 10); 
   text-decoration: none; 
   border-radius: 5px; 
   transition: background-color 0.3s; 
 }
 .btn-especificaciones:hover {
-  background-color: #084080; 
+  background-color: #808008; 
 }
 .tabla-desplegable {
   max-height: 0;
@@ -141,94 +140,78 @@ header {
 .Presupuesto { 
   display: inline-block;
   padding: 10px 20px; 
-  background-color: #084080; 
-  color: white; 
+  background-color: #FFD700; 
+  color: rgb(10, 10, 10); 
   text-decoration: none; 
   border-radius: 5px; 
   transition: background-color 0.3s; 
 }
 .Presupuesto:hoveR {
-  background-color: #084080; 
+  background-color: #808008; 
 }
 
 
 /*FOOTER*/
 footer {
-  background-color: #06184d;
+  background: #FFD700;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 8px 8px; 
-  color: #c6bebe83;
-}
-.footer-logo, 
-.footer-sections, 
-.footer-contact, 
-.footer-export {
-  margin: 10px;
-  padding: 10px;
-  flex: 1;
-  position: relative;
+  align-items: center;
+  flex-wrap: nowrap; 
 }
 .footer-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px; 
+  text-align: center;
+  flex: 1;
 }
-.logo-reducida {
-  max-width: 200px; 
-  height: auto; 
+.footer-logo img {
+  height: 60px;
+  margin: 5px;
 }
 .footer-sections {
-  width: 100%;
-  padding: 10px;
-  background-color: #06184d;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  text-align: center; 
-}
-  .footer-sections ul {
-  list-style-type: none;
-  padding: 0;
   text-align: center;
+  flex: 1;
+}
+.footer-sections ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .footer-sections li {
   margin: 5px 0;
 }
 .footer-sections a {
-  color: #c6bebe83;
+  font-size: medium;
   text-decoration: none;
-  display: block;
+  color: #000;
 }
-.footer-contact p, 
-.footer-export h3 {
-  margin: 5px 0;
+.footer-contact-export {
+  display: flex;
+  justify-content: center;
+  flex: 1; 
+  align-items: center;
+  text-align: center;
+  gap: 100px;
 }
-.export-map {
-  width: 50px; 
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.footer-contact, 
+.footer-export {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.footer-sections::after, 
-.footer-contact::after, 
-.footer-export::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 1px;
-  height: 100%;
-  background-color: white;
+.contact-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
 }
-.footer-sections:last-child::after, 
-.footer-contact:last-child::after, 
-.footer-export:last-child::after {
-  display: none;
+.contact-icons img {
+  height: 40px;
 }
+.footer-export img {
+  height: 40px;
+  margin-top: 5px;
+}
+
 
 
 

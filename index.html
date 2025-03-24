@@ -5,35 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="/Img y Fondos/Icono.png" type="image/icon">
+    <link rel="icon" href="Logos/Platexa simbolo.png" type="image/icon">
     <link rel="shortcut icon" href="/Img y Fondos/Icono.png" type="image/icon">
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css"/>
-    <title>BerPlast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>PLATEXA</title>
 </head>
 <body>
     <header>
         <div class="logo-banner">
-            <img class="logo" src="/Img y Fondos/Berplast 2.png" alt="logo">
-            <nav class="nav-bar">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="/pages/productos.html">Productos</a></li>
-                    <li><a href="/pages/clientes.html">Clientes</a></li>
-                    <li><a href="/pages/contacto.html">Contactos</a></li>
-                </ul>
-            </nav>
+            <img class="logo" src="/Logos/Platexa simbolo.png" alt="Logo">
+            <img class="palabras" src="/Logos/Platexa Palabras.png" alt="Texto Platexa">
+            <div class="menu-btn">&#9776;</div>
         </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="/pages/productos.html">Productos</a></li>
+                <li><a href="/pages/clientes.html">Clientes</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
+    
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navBar = document.querySelector('.nav-bar ul');
+        
+        menuBtn.addEventListener('click', () => {
+        navBar.classList.toggle('active');
+        });
+    </script>
+</header>
         <main>
             <div class="video-container">
                 <video width="640" height="360" autoplay loop muted>
                     <source src="/Img y Fondos/recortado 1.mp4" class="video-index" type="video/mp4">
                 </video>
                 <div class="overlay-text">
-                    <h1>BERPLAST</h1>
-                    <p>Somos fabricantes de bolsas plásticas para todo tipo de industrias como las alimenticias, farmaceuticas y veterinaria entre otras</p>
+                    <p>En PLATEXA creamos las bolsas platicas que tu empresa necesita. Ofrecemos calidad,resistencia y personalizacion para adaptarnos a culquier industria, garantizando soluciones eficientes y a la medida de tu negocio</p>
                     <a href="/pages/contacto.html" class="btn-contacto">Contacto</a>
                 </div>
             </div>
@@ -54,60 +67,40 @@
                 <p>Diseños y soluciones modernas para cada necesidad.</p>
             </div>
         </section>
-        <section id="productos-destacados">
-            <h1>Productos destacados</h1>
-            <div class="productoindex">
-                <img src="/productos/Hielo.png" alt="Producto 1">
-                <h3>Bolsas para Hielo</h3>
-                <a href="pages/productos.html" class="boton-producto">Ver precios</a>
-                <a href="/pages/contacto.html" class="boton-ver-mas">Ver más</a>
-            </div>
-            <div class="productoindex">
-                <img src="/productos/Leña.png" alt="Producto 2">
-                <h3>Bolsas para Carbon y Leña</h3>
-                <a href="pages/productos.html" class="boton-producto">Ver precios</a>
-                <a href="/pages/contacto.html" class="boton-ver-mas">Ver más</a>  
-            </div>
-            <div class="productoindex">
-                <img src="/productos/Residuos.png" alt="Producto 4">
-                <h3>Bolsas de Residuos Reforsadas</h3>
-                <a href="pages/productos.html" class="boton-producto">Ver precios</a>
-                <a href="/pages/contacto.html" class="boton-ver-mas">Ver más</a>
-            </div>
-            <div class="productoindex">
-                <img src="/productos/Camisera.png" alt="Producto 5">
-                <h3>Bolsas camisetas</h3>
-                <a href="/pageproductos/camisetas.html" class="boton-producto">Ver precios</a>
-                <a href="/pages/contacto.html" class="boton-ver-mas">Ver más</a>
         </section>
-        <div class="form-container-index">
-            <img src="/Img y Fondos/correo.jpg" alt="correo">  
-            <div class="form-content">
-                <h1>Contactate con nosotros</h1>
-                <form id="contactindex" action="https://formsubmit.co/administracion@berplast.com" method="POST">                
-                    <label for="nombre">Nombre:</label>  
-                    <input type="text" name="nombre" required> 
+                <section class="contacto-seccion">
+                    <h2>Soluciones en bolsas plásticas para tu negocio</h2>
+                    <p>Da el primer paso en la mejora de la presentacion de tus productos, comunícate con nuestro equipo para obtener asistencia personalizada.</p>
+                    
+                    <button class="btn-contacto" onclick="toggleFormulario()">Contáctanos</button>
                 
-                    <label for="nombre">Telefono:</label>  
-                    <input type="text" name="nombre" required> 
-                
-                    <label for="email">Email:</label>  
-                    <input type="email" name="email" required>  
-                
-                    <label for="consulta">Consulta:</label>  
-                    <textarea name="consulta" cols="15" rows="5"></textarea>  
-                
-                    <input type="submit" value="Enviar">
-                    <input type="hidden" name="_captcha" value="false">    
-                </form> 
-            </div>
-        </div>
-        
+                    <div id="formulario-contacto" class="formulario oculto">
+                        <form action="enviar.php" method="POST">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                            
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                            
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                            
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                    <script>
+                        function toggleFormulario() {
+                        let formulario = document.getElementById("formulario-contacto");
+                        formulario.classList.toggle("oculto");
+                    }
+                    </script>
+                </section>        
         </main>
 
     <footer>
         <div class="footer-logo">
-            <img src="/Img y Fondos/Berplast.png" alt="Logo" class="logo-reducida">
+            <img src="/Logos/Platexa simbolo.png" alt="logo-recuadros">
+            <img src="/Logos/Platexa Palabras.png" alt="logo-palabras">
         </div>
         <div class="footer-sections">
             <ul>
@@ -117,16 +110,22 @@
                 <li><a href="/pages/contacto.html">Contacto</a></li>
             </ul>
         </div>
-        <div class="footer-contact">
-            <h3>Contacto</h3>
-            <p> Calle Entre Muros y Marsella,Edificio 55, C.P. 1923, Berisso, Provincia de Buenos Aires.</p>
-            <p> 461-1737</p>
-            <p> +54 9 0221-2020035</p>
-            <p> administracion@berplast.com</p>
-        </div> 
-        <div class="footer-export">
-            <h3>Envios</h3>
-            <img src="/Img y Fondos/Mapa en blanco.png" alt="Mapa Exportaciones" class="export-map">
+        <div class="footer-contact-export">
+            <div class="footer-contact">
+                <h3>Contáctanos</h3>
+                <div class="contact-icons">
+                    <a href="https://wa.me/+542212020035" target="_blank">
+                        <img src="/Img y Fondos/Cell.png" alt="Teléfono">
+                    </a>
+                    <a href="/pages/contacto.html">
+                        <img src="/Img y Fondos/Email.png" alt="Correo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-export">
+                <h3>Envíos</h3>
+                <img src="/Img y Fondos/Mapa en blanco.png" alt="Mapa Exportaciones" class="export-map">
+            </div>
         </div>
     </footer>
 </body>

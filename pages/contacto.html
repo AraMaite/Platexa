@@ -16,41 +16,51 @@
 <body>  
     <header>
         <div class="logo-banner">
-            <img class="logo" src="/Img y Fondos/Berplast 2.png" alt="logo">
-            <nav class="nav-bar">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="/pages/productos.html">Productos</a></li>
-                    <li><a href="/pages/clientes.html">Clientes</a></li>
-                    <li><a href="/pages/contacto.html">Contactos</a></li>
-                </ul>
-            </nav>
+            <img class="logo" src="/Logos/Platexa simbolo.png" alt="Logo">
+            <img class="palabras" src="/Logos/Platexa Palabras.png" alt="Texto Platexa">
+            <div class="menu-btn">&#9776;</div>
         </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/pages/productos.html">Productos</a></li>
+                <li><a href="/pages/clientes.html">Clientes</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
+    
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navBar = document.querySelector('.nav-bar ul');
+        
+        menuBtn.addEventListener('click', () => {
+        navBar.classList.toggle('active');
+        });
+    </script>
+</header>
     <main>
-        <div class="contact-container"> 
-            <div class="mapa-container">  
-                <h1>¿Dónde encontrarnos?</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.32472150532496!2d-57.89129453206305!3d-34.86190115564816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e5d763df4a71%3A0xea74abdafc84a771!2sPlastico%20Berisso!5e0!3m2!1ses!2sar!4v1729308945397!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="mapa"></iframe>
+        <div class="contact-container">
+            <div class="info-container">
+                <h2>UBICACIÓN</h2>
+                <p>Poligono Industrial de Berisso, Calle Marsella, Entre Muros y Edificio 55,<br>B1923 Berisso, Provincia de Buenos Aires</p>
+                
+                <h2>CONTACTO</h2>
+                <div class="contact-details">
+                    <p>@Platexa</p>
+                    <p>platexa.plasticos@gmail.com</p>
+                    <p>www.paltexa.com</p>
+                    <p>+54 221 202 0035</p>
+                </div>
             </div>    
-            <div class="form-container"> 
-                <h1>Comunicate con nosotros</h1>  
-                <form id="contactForm" action="https://formsubmit.co/administracion@berplast.com " method="POST">  
-                <label for="nombre">Nombre:</label>  
-                <input type="text" name="nombre" required>  
-            
-                <label for="email">Email:</label>  
-                <input type="email" name="email" required>  
-            
-                <label for="consulta">Consulta:</label>  
-                <textarea name="consulta" cols="15" rows="5"></textarea>  
-            
-                <input type="submit" value="Enviar">
-                <input type="hidden" name="_next" value="https://berplast.netlify.app/"> 
-                <input type="hidden" name="_captcha" value="false"> 
-                </form> 
+            <div class="map-container">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.32472150532496!2d-57.89129453206305!3d-34.86190115564816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e5d763df4a71%3A0xea74abdafc84a771!2sPlastico%20Berisso!5e0!3m2!1ses!2sar!4v1729308945397!5m2!1ses!2sar" 
+                width="1500"height="350"style="border:0;"allowfullscreen="" loading="lazy">
+                </iframe>            
             </div>
         </div>
+
         <section id="contactanos" class="contact-section">
             <h1>Otros medios</h1>
             <div class="contact-cards">
@@ -62,7 +72,7 @@
                     </div>
                     <div class="contact-info">
                         <h3>Compras</h3>
-                        <p>compras@berplast.com</p>
+                        <p>plasticosplatexa@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-card">
@@ -73,7 +83,7 @@
                     </div>
                     <div class="contact-info">
                         <h3>Corporativo</h3>
-                        <p>administracion@berplast.com</p>
+                        <p>administracion@platexa.com</p>
                     </div>
                 </div>
                 <div class="contact-card">
@@ -84,7 +94,7 @@
                     </div>
                     <div class="contact-info">
                         <h3>Atencion telefonica</h3>
-                        <p>+54 221 202 0035</p>
+                        <p>+54 221 2020035</p>
                     </div>
                 </div>
             </div>
@@ -93,26 +103,33 @@
 
     <footer>
         <div class="footer-logo">
-            <img src="/Img y Fondos/Berplast.png" alt="Logo" class="logo-reducida">
+            <img src="/Logos/Platexa simbolo.png" alt="logo-recuadros">
+            <img src="/Logos/Platexa Palabras.png" alt="logo-palabras">
         </div>
         <div class="footer-sections">
             <ul>
-                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="#">Inicio</a></li>
                 <li><a href="/pages/productos.html">Productos</a></li>
                 <li><a href="/pages/clientes.html">Clientes</a></li>
                 <li><a href="/pages/contacto.html">Contacto</a></li>
             </ul>
         </div>
-        <div class="footer-contact">
-            <h3>Contacto</h3>
-            <p> Calle Entre Muros y Marsella,Edificio 55, C.P. 1923, Berisso, Provincia de Buenos Aires.</p>
-            <p> 461-1737</p>
-            <p> +54 9 0221-2020035</p>
-            <p> administracion@berplast.com</p>
-        </div> 
-        <div class="footer-export">
-            <h3>Envios</h3>
-            <img src="/Img y Fondos/Mapa en blanco.png" alt="Mapa Exportaciones" class="export-map">
+        <div class="footer-contact-export">
+            <div class="footer-contact">
+                <h3>Contáctanos</h3>
+                <div class="contact-icons">
+                    <a href="https://wa.me/+542212020035" target="_blank">
+                        <img src="/Img y Fondos/Cell.png" alt="Teléfono">
+                    </a>
+                    <a href="/pages/contacto.html">
+                        <img src="/Img y Fondos/Email.png" alt="Correo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-export">
+                <h3>Envíos</h3>
+                <img src="/Img y Fondos/Mapa en blanco.png" alt="Mapa Exportaciones" class="export-map">
+            </div>
         </div>
     </footer>
 </body>

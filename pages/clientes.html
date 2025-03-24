@@ -17,17 +17,29 @@
 <body>
     <header>
         <div class="logo-banner">
-            <img class="logo" src="/Img y Fondos/Berplast 2.png" alt="logo">
-            <nav class="nav-bar">
-                <ul>
-                    <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/pages/productos.html">Productos</a></li>
-                    <li><a href="/pages/clientes.html">Clientes</a></li>
-                    <li><a href="/pages/contacto.html">Contactos</a></li>
-                </ul>
-            </nav>
+            <img class="logo" src="/Logos/Platexa simbolo.png" alt="Logo">
+            <img class="palabras" src="/Logos/Platexa Palabras.png" alt="Texto Platexa">
+            <div class="menu-btn">&#9776;</div>
         </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/pages/productos.html">Productos</a></li>
+                <li><a href="/pages/clientes.html">Clientes</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
+    
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navBar = document.querySelector('.nav-bar ul');
+        
+        menuBtn.addEventListener('click', () => {
+        navBar.classList.toggle('active');
+        });
+    </script>
+</header>
     <main>
         </div> 
             <div class="imagen-superior"> 
@@ -138,7 +150,8 @@
     </main>    
     <footer>
         <div class="footer-logo">
-            <img src="/Img y Fondos/Berplast.png" alt="Logo" class="logo-reducida">
+            <img src="/Logos/Platexa simbolo.png" alt="logo-recuadros">
+            <img src="/Logos/Platexa Palabras.png" alt="logo-palabras">
         </div>
         <div class="footer-sections">
             <ul>
@@ -148,16 +161,22 @@
                 <li><a href="/pages/contacto.html">Contacto</a></li>
             </ul>
         </div>
-        <div class="footer-contact">
-            <h3>Contacto</h3>
-            <p> Calle Entre Muros y Marsella,Edificio 55, C.P. 1923, Berisso, Provincia de Buenos Aires.</p>
-            <p> 461-1737</p>
-            <p> +54 9 0221-2020035</p>
-            <p> administracion@berplast.com</p>
-        </div> 
-        <div class="footer-export">
-            <h3>Envios</h3>
-            <img src="/Img y Fondos/Mapa en blanco.png" alt="Mapa Exportaciones" class="export-map">
+        <div class="footer-contact-export">
+            <div class="footer-contact">
+                <h3>Contáctanos</h3>
+                <div class="contact-icons">
+                    <a href="https://wa.me/+542212020035" target="_blank">
+                        <img src="/Img y Fondos/Cell.png" alt="Teléfono">
+                    </a>
+                    <a href="/pages/contacto.html">
+                        <img src="/Img y Fondos/Email.png" alt="Correo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-export">
+                <h3>Envíos</h3>
+                <img src="/Img y Fondos/Mapa en blanco.png" alt="Mapa Exportaciones" class="export-map">
+            </div>
         </div>
     </footer>
 </body>
