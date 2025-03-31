@@ -24,13 +24,10 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-.logo {
-  height: 80px;
-}
 .palabras {
   height: 60px;
   margin: 0 auto;
-  margin-left: 485px;
+  margin-left: 600px;
 }
 .nav-bar {
   margin-top: 10px;
@@ -153,57 +150,6 @@ header {
   margin-left: 80px;
 }
 /*PRODUCTOS DESTACADO DEL INDEX*/
-#productos-destacados h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  width: 100%;
-}
-#productos-destacados {
-  display: flex;
-  flex-wrap: wrap;  
-  justify-content: space-between;
-  gap: 5px;
-}
-.productoindex {
-  margin: 20px;
-  text-align: center;
-  max-width: 250px; 
-  padding: 10px; 
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  transition: transform 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.productoindex:hover { 
-  transform: scale(1.05); 
-}
-.productoindex img {
-  max-width: 80%; 
-  height: auto; 
-  flex-grow: 1;
-} 
-.boton-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-.boton-producto, .boton-ver-mas { 
-  display: inline-block;
-  margin: 10px 5px;
-  padding: 10px 10px; 
-  background-color: #f4b740;  
-  color: #000000; 
-  text-decoration: none; 
-  border-radius: 5px; 
-} 
-.boton-producto:hover, .boton-ver-mas:hover { 
-  background-color: white; 
-}
 .contacto-seccion {
   text-align: center;
   padding: 50px;
@@ -267,7 +213,7 @@ header {
 }
 
 
-/*PESTAÑA DE PRODUCTOS*/
+/*PRODUCTOS*/
 .imagen-superior {
   position: relative; /* Permite posicionar elementos absolutos dentro */
   display: inline-block;
@@ -382,6 +328,9 @@ header {
   overflow: hidden;
   margin-top: 70px;
 }
+.carousel h1 {
+  text-align: center;
+}
 .carousel-inner {
   display: flex;
   transition: transform 1s ease-in-out;
@@ -466,7 +415,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-.imagen-superior1 video {
+.imagen-superior1 {
   max-width: 100%; 
   height: auto; 
   max-width: 640px;
@@ -511,7 +460,6 @@ header {
   width: 20px;
   height: 20px;
 }
-
 .imagen-superior img { 
   width: 100%; 
   height: auto;
@@ -533,7 +481,7 @@ header {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px; 
+  width: 350px; 
   text-align: left; 
   display: flex;
   align-items: center;
@@ -570,6 +518,8 @@ p {
   font-size: 1em;
   margin: 5px 0;
 }
+
+
 /*Footer*/
 footer {
   background: #FFD700;
@@ -631,6 +581,7 @@ footer {
   margin-top: 5px;
 }
 
+
 /* Dispositivos pequeños (teléfonos) */
 @media (min-width: 360px) and (max-width: 956px) {
   .logo-banner {
@@ -639,7 +590,7 @@ footer {
     align-items: center;
   }
   .palabras {
-    margin-left: 150px;
+    margin-left: 250px;
     text-align: center;
   }
   .nav-bar ul {
@@ -663,6 +614,29 @@ footer {
   .overlay-text p {
     font-size: 1em;
   }
+  .imagen-superior .texto-sobre-imagen {
+    font-size: 1rem; 
+    padding: 8px 15px; 
+  }
+  .imagen-superior img {
+    height: auto; 
+  }
+  .imagen-superior .texto-sobre-imagen h1 {
+    font-size: 1.5rem; 
+  }
+  .imagen-superior .texto-sobre-imagen h4 {
+    font-size: 0.9rem; 
+  }
+  .imagen-superior .texto-sobre-imagen {
+    font-size: 0.9rem; 
+    padding: 5px 10px; 
+  }
+  .imagen-superior .texto-sobre-imagen h1 {
+    font-size: 1.2rem; 
+  }
+  .imagen-superior .texto-sobre-imagen h4 {
+    font-size: 0.8rem; 
+  }
   .servicio {
     width: 90%; 
     height: auto; 
@@ -684,6 +658,36 @@ footer {
     font-size: 14px; 
     align-items: center;
   }
+  .introduction {
+    flex-direction: column; /* Cambia la disposición a columnas */
+    align-items: center;
+    gap: 10px;
+  }
+  .imagen-superior {
+    width: 100%; /* Asegura que el video ocupe todo el ancho */
+    display: flex;
+    justify-content: center;
+  }
+  .introduction p {
+    max-width: 100%; /* Ajusta el texto al ancho disponible */
+    text-align: justify; /* Centra el texto */
+  }
+  .container1 {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: flex-start; /* Asegura que el video quede arriba */
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center;
+  }
+  .imagen-superior1 {
+    width: 100%; 
+    max-width: 640px;
+  } 
+  .introduction1 p {
+    max-width: 80%; /* Ajusta el ancho del texto */
+    text-align: center; /* Centra el texto */
+    margin: 10px 0; /* Espaciado arriba y abajo */
+  }
   footer {
     flex-direction: column;
     align-items: center;
@@ -693,7 +697,7 @@ footer {
   }
   .footer-sections ul {
     display: flex;
-    flex-direction: row; /* Los elementos <li> estarán en fila en dispositivos móviles */
+    flex-direction: row; 
     justify-content: center;
   }
   .footer-sections li {
@@ -719,60 +723,50 @@ footer {
   .logo {
     max-height: 300px;
   }
-
   .nav-bar ul {
     padding-left: 30px;
     justify-content: space-around;
   }
-
   .carrusel-item img {
     width: 30%;
   }
-
   .servicios, .productos-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
-
   .productoindex {
     max-width: 220px;
   }
-
   .footer-logo img {
     width: 250px;
   }
-
   .contact-container {
     flex-direction: row;
   }
 }
 
+
 /* Dispositivos grandes (escritorios) */
-@media (min-width: 992px) and (max-width: 1200px) {
-  
+@media (min-width: 992px) and (max-width: 1200px) {  
   .nav-bar ul {
     justify-content: space-evenly;
   }
-
   .video-container {
     height: 500px;
   }
-
   .carrusel-texto h2 {
     font-size: 2rem;
   }
-
   .servicios, .productos-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
   .footer-logo img {
     width: 300px;
   }
   .footer-logo {
     padding: 30px;
-}
-.logo-reducida {
+  }
+  .logo-reducida {
     max-width: 120px;
-}
+  }
 }

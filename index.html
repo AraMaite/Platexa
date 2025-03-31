@@ -6,7 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="Logos/Platexa simbolo.png" type="image/icon">
-    <link rel="shortcut icon" href="/Img y Fondos/Icono.png" type="image/icon">
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css"/>
@@ -17,8 +16,7 @@
 <body>
     <header>
         <div class="logo-banner">
-            <img class="logo" src="/Logos/Platexa simbolo.png" alt="Logo">
-            <img class="palabras" src="/Logos/Platexa Palabras.png" alt="Texto Platexa">
+            <img class="palabras" src="/Logos/Platexa s-f.png" alt="Texto Platexa">
             <div class="menu-btn">&#9776;</div>
         </div>
         <nav class="nav-bar">
@@ -46,7 +44,7 @@
                     <source src="/Img y Fondos/recortado 1.mp4" class="video-index" type="video/mp4">
                 </video>
                 <div class="overlay-text">
-                    <p>En PLATEXA creamos las bolsas platicas que tu empresa necesita. Ofrecemos calidad,resistencia y personalizacion para adaptarnos a culquier industria, garantizando soluciones eficientes y a la medida de tu negocio</p>
+                    <p>En PLATEXA creamos las bolsas platicas que tu empresa necesita. Ofrecemos calidad,resistencia y personalizacion para adaptarnos a cualquier industria, garantizando soluciones eficientes y a la medida de tu negocio</p>
                     <a href="/pages/contacto.html" class="btn-contacto">Contacto</a>
                 </div>
             </div>
@@ -75,8 +73,7 @@
                     <button class="btn-contacto" onclick="toggleFormulario()">Contáctanos</button>
                 
                     <div id="formulario-contacto" class="formulario oculto">
-                        <form action="enviar.php" method="POST">
-                            <label for="nombre">Nombre</label>
+                        <form target="_blank" action="https://formsubmit.co/plasticosplatexa@gmail.com" method="POST">                            <label for="nombre">Nombre</label>
                             <input type="text" id="nombre" name="nombre" required>
                             
                             <label for="email">Correo Electrónico</label>
@@ -85,9 +82,13 @@
                             <label for="mensaje">Mensaje</label>
                             <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
                             
+                            <!-- Campo para la respuesta -->
+                            <input type="hidden" name="_replyto" value="email">
+                            
                             <button type="submit">Enviar</button>
                         </form>
                     </div>
+                    
                     <script>
                         function toggleFormulario() {
                         let formulario = document.getElementById("formulario-contacto");
@@ -99,8 +100,7 @@
 
     <footer>
         <div class="footer-logo">
-            <img src="/Logos/Platexa simbolo.png" alt="logo-recuadros">
-            <img src="/Logos/Platexa Palabras.png" alt="logo-palabras">
+            <img src="/Logos/Platexa s-f.png" alt="logo-palabras">
         </div>
         <div class="footer-sections">
             <ul>
