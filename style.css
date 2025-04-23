@@ -7,7 +7,7 @@ body {
   font-family:"Hind Siliguri", sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url(./Img\ y\ Fondos/); 
+  background-color: #fff ; 
   background-size: cover; 
   background-position: center; 
   background-attachment: fixed; 
@@ -99,7 +99,7 @@ header {
   max-width: 900px; 
 }
 .servicio {
-  background-color: transparent;
+  background-color: #fff ;
   border-radius: 15px; 
   padding: 20px;
   text-align: left;
@@ -117,7 +117,7 @@ header {
   content: "";
   position: absolute;
   inset: 0; 
-  background: linear-gradient(to right, #ee2d7a, #ee7f1e,#ffbb00,#ffbb00,#0fb9ed);
+  background: linear-gradient(to right,#ffbb00,#edb92a);
   border-radius: 15px; 
   z-index: -1; 
   padding: 3px; 
