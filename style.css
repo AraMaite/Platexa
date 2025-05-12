@@ -595,149 +595,168 @@ footer {
 
 
 /* Dispositivos pequeños (teléfonos) */
-@media (min-width: 360px) and (max-width: 956px) {
-  .logo-banner {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .palabras {
-    margin-left: 250px;
-    text-align: center;
-  }
-  .nav-bar ul {
-    display: none;
-    flex-direction: row; 
-    gap: 10px;
-  }
-  .nav-bar ul.active {
-    display: flex;
-  }
-  .logo-banner {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .menu-btn {
-    display: block;
-    cursor: pointer;
-  }
-  .video-container {
-    height: auto;
-  }
-  .overlay-text h1 {
-    font-size: 2em;
-  }
-  .overlay-text p {
-    font-size: 1em;
-  }
-  .imagen-superior .texto-sobre-imagen {
-    font-size: 1rem; 
-    padding: 8px 15px; 
-  }
-  .imagen-superior img {
-    height: auto; 
-  }
-  .imagen-superior .texto-sobre-imagen h1 {
-    font-size: 1.5rem; 
-  }
-  .imagen-superior .texto-sobre-imagen h4 {
-    font-size: 0.9rem; 
-  }
-  .imagen-superior .texto-sobre-imagen {
-    font-size: 0.9rem; 
-    padding: 5px 10px; 
-  }
-  .imagen-superior .texto-sobre-imagen h1 {
-    font-size: 1.2rem; 
-  }
-  .imagen-superior .texto-sobre-imagen h4 {
-    font-size: 0.8rem; 
-  }
-  .productos-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas chicas */
-  }
-  .producto {
-    padding: 10px;
-    font-size: 14px;
-  }
-  .servicio {
-    width: 90%; 
-    height: auto; 
-    padding: 10px;
-    flex-direction: row;
-    align-items: center;
-  }
-  .servicio img {
-    width: 40px; 
-    margin-bottom: 10px; 
-  }
-  .servicio h3 {
-    align-items: center; 
-  }
-  .servicio h3::after {
-    content: none; 
-  }
-  .servicio p {
-    font-size: 14px; 
-    align-items: center;
-  }
-  .introduction {
-    flex-direction: column; /* Cambia la disposición a columnas */
-    align-items: center;
-    gap: 10px;
-  }
-  .imagen-superior {
-    width: 100%; /* Asegura que el video ocupe todo el ancho */
-    display: flex;
-    justify-content: center;
-  }
-  .introduction p {
-    max-width: 100%; /* Ajusta el texto al ancho disponible */
-    text-align: justify; /* Centra el texto */
-  }
-  .container1 {
-    display: flex;
-    flex-direction: column; /* Alinea los elementos en columna */
-    justify-content: flex-start; /* Asegura que el video quede arriba */
-    align-items: center; /* Centra los elementos horizontalmente */
-    text-align: center;
-  }
-  .imagen-superior1 {
-    width: 100%; 
-    max-width: 640px;
-  } 
-  .introduction1 p {
-    max-width: 80%; /* Ajusta el ancho del texto */
-    text-align: center; /* Centra el texto */
-    margin: 10px 0; /* Espaciado arriba y abajo */
-  }
-  footer {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-logo img {
-    margin-bottom: 10px;
-  }
-  .footer-sections ul {
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-  }
-  .footer-sections li {
-    margin: 0 10px; 
-  }
-  .footer-contact-export {
-    flex-direction: row; 
-    justify-content: center;
-    gap: 50px; 
-  }
-  .footer-contact img,
-  .footer-export img {
-    margin-bottom: 10px;
-  }
-  .footer-export img {
-    margin-bottom: 10px;
-  }
+@media (min-width: 310px) and (max-width: 800px) {
+body {
+  overflow-x: hidden;
+}
+.logo-banner {
+  flex-direction: column; /* si querés que sea en columna en móviles */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.palabras {
+  margin-left:0;
+  text-align: center;
+}
+.nav-bar ul {
+  display: none;
+  flex-direction: row; 
+  gap: 10px;
+}
+.nav-bar ul.active {
+  display: flex;
+}
+.menu-btn {
+  display: block;
+  font-size: 1.5em;
+  padding: 10px;
+}
+.video-container {
+  height: auto;
+}
+.overlay-text h1 {
+  font-size: 1.2rem;
+}
+.overlay-text {
+  width: 80%; 
+  padding: 10px;
+}
+.overlay-text p {
+  font-size: 0.9rem;
+}
+.texto-sobre-imagen {
+  width: 80%;  
+  padding: 10px;
+}
+.texto-sobre-imagen h1 {
+  font-size: 1.5rem;
+}
+.texto-sobre-imagen h4 {
+  font-size: 1rem;  
+}
+.imagen-superior .texto-sobre-imagen {
+  font-size: 1rem; 
+  padding: 8px 15px; 
+}
+.imagen-superior img {
+  width: 100%;
+  height: auto;
+  display: block; 
+}
+.imagen-superior .texto-sobre-imagen h1 {
+  font-size: 1.5rem; 
+}
+.imagen-superior .texto-sobre-imagen h4 {
+  font-size: 0.9rem; 
+}
+.imagen-superior .texto-sobre-imagen {
+  font-size: 0.9rem; 
+  padding: 5px 10px; 
+}
+.imagen-superior .texto-sobre-imagen h1 {
+  font-size: 1.2rem; 
+}
+.imagen-superior .texto-sobre-imagen h4 {
+  font-size: 0.8rem; 
+}
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.producto {
+  padding: 10px;
+  font-size: 14px;
+}
+.servicio {
+  width: 90%; 
+  height: auto; 
+  padding: 10px;
+  flex-direction: row;
+  align-items: center;
+}
+.servicio img {
+  width: 40px; 
+  margin-bottom: 10px; 
+}
+.servicio h3 {
+  align-items: center; 
+}
+.servicio h3::after {
+  content: none; 
+}
+.servicio p {
+  font-size: 14px; 
+  align-items: center;
+}
+.introduction {
+  flex-direction: column; 
+  align-items: center;
+  gap: 10px;
+}
+.imagen-superior {
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+}
+.introduction p {
+  max-width: 100%; 
+  text-align: justify;
+}
+.container1 {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: center; 
+  text-align: center;
+}
+.imagen-superior1 {
+  width: 100%; 
+  max-width: 640px;
+} 
+.introduction1 p {
+  max-width: 80%; /* Ajusta el ancho del texto */
+  text-align: center; /* Centra el texto */
+  margin: 10px 0; /* Espaciado arriba y abajo */
+}
+footer {
+  flex-direction: column;
+  align-items: center;
+}
+.footer-logo img {
+  margin-bottom: 10px;
+}
+.footer-sections ul {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+}
+.footer-sections li {
+  margin: 0 10px; 
+}
+.footer-contact-export {
+  flex-direction: row; 
+  justify-content: center;
+  gap: 50px; 
+}
+.footer-contact img,
+.footer-export img {
+  margin-bottom: 10px;
+}
+.footer-export img {
+  margin-bottom: 10px;
+}
 }
 
 

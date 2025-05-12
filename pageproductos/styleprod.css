@@ -213,26 +213,46 @@ footer {
 }
 
 
-
-
-/* Media Query */
-@media (min-width: 1025px) { 
-  
-  .introduction, .imagen-superior { 
-      max-width: 45%; 
-  }
-}
-
 /* Media Query para pantallas de ancho máximo 480px*/
 @media (max-width: 480px) {
-  .introduction h2 {
-      font-size: 1.5rem; /* Ajusta el tamaño del título */
+body {
+  overflow-x: hidden;
+}
+.logo-banner {
+  flex-direction: column; /* si querés que sea en columna en móviles */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.palabras {
+  margin-left:0;
+  text-align: center;
+}
+.nav-bar ul {
+  display: none;
+  flex-direction: row; 
+  gap: 10px;
+}
+.nav-bar ul.active {
+  display: flex;
+}
+.menu-btn {
+  display: block;
+  font-size: 1.5em;
+  padding: 10px;
+}
+.introduction h2 {
+    font-size: 1.2rem; /* Reduce el tamaño del título en móviles */
   }
+
   .introduction p {
-      font-size: 1rem; /* Ajusta el tamaño del texto */
+    font-size: 0.9rem; /* Reduce el tamaño del texto en móviles */
+    margin: 10px 0; /* Agrega algo de espacio alrededor */
   }
+
   .imagen-superior video {
-      width: 100%; /* Asegura que el video se ajuste al ancho del contenedor */
+    width: 100%; /* El video se adapta completamente al ancho en pantallas pequeñas */
+    height: auto; /* Mantiene la proporción en pantallas más pequeñas */
   }
   footer {
     flex-direction: column;
@@ -264,11 +284,32 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .logo-banner {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+  body {
+  overflow-x: hidden;
+}
+.logo-banner {
+  flex-direction: column; /* si querés que sea en columna en móviles */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.palabras {
+  margin-left:0;
+  text-align: center;
+}
+.nav-bar ul {
+  display: none;
+  flex-direction: row; 
+  gap: 10px;
+}
+.nav-bar ul.active {
+  display: flex;
+}
+.menu-btn {
+  display: block;
+  font-size: 1.5em;
+  padding: 10px;
+}
   .palabras {
     margin-left: 250px;
     text-align: center;
