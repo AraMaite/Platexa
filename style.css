@@ -67,9 +67,9 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
+  font-weight: 700;
   transform: translate(-50%, -50%);
-  color: #FFF;
-  background-color: rgba(0, 0, 0, 0.5); 
+  color: #000000;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -230,9 +230,8 @@ header {
   top: 30%; /* sube el texto */
   left: 50%;
   transform: translate(-50%, -30%);
-  color: white;
+  color: rgb(8, 8, 8);
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.25);
   padding: 10px 15px;
   border-radius: 6px;
   width: 90%;
@@ -337,31 +336,32 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between; 
-  gap: 20px;
-  padding: 20px;
+  gap: 10px; /* aumentamos un poco */
+  padding: 15px;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: 20px auto 0 auto;
 }
 .primervideo p {
   color: #333333;
-  font-size: 1em;
-  line-height: 2rem;
-  max-width: 600px; 
+  font-size: 1.7em;
+  line-height: 1.7rem;
+  max-width: 70%; /* en lugar de 600px fijo, uso % para más fluidez */
+  flex-grow: 1; /* que el texto pueda crecer */
+  margin: 0; /* sacamos márgenes que puedan afectar */
 }
 .containervideo {
   flex: 1; 
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 30%; /* para que el video no se pase */
 }
 .videosuperior video {
-  max-width: 100%; 
+  width: 100%;  /* 100% del contenedor flexible */
   height: auto; 
-  max-width: 640px;
   border: none;
 }
 /*Carrusel*/ 
@@ -395,87 +395,66 @@ header {
   display: block; 
 } 
 /*Segundo video*/
-.introduction1 {
+.container1 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between; 
-  gap: 20px;
-  padding: 20px;
+  gap: 10px; /* aumentamos un poco */
+  padding: 15px;
   background-color: #f9f9f9;
   border-radius: 10px;
-  box-shadow: 0 4px 8px #333(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 1200px;
-  margin: 0 auto;
-  margin-bottom: 40px;
+  margin: 20px auto 0 auto;
 }
-.introduction1 p {
-  flex: 1;
-  max-width: 600px;
+.container1 p {
   color: #333333;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  text-align: justify;
-  margin-left: 20px;
+  font-size: 1.7em;
+  line-height: 1.5rem;
+  max-width: 70%; /* en lugar de 600px fijo, uso % para más fluidez */
+  flex-grow: 1; /* que el texto pueda crecer */
+  margin: 0; /* sacamos márgenes que puedan afectar */
 }
-.container1 {
+.imagen-superior1 {
   flex: 1; 
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 30%;
 }
-.imagen-superior1 {
-  max-width: 100%; 
+.imagen-superior1 video {
+  width: 100%;  /* 100% del contenedor flexible */
   height: auto; 
-  max-width: 640px;
   border: none;
-  margin-bottom: 80px;
 }
 
 
 /*CONTACTO*/
 .contact-container {
-  display: flex;
-  flex-wrap: nowrap;
-  border-radius: 25px;
-  overflow: hidden; 
-  background-color: transparent; 
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  margin-top: 40px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 0;
 }
 .info-container {
   background-color: #ffcc80;
-  flex: 1;
-  padding: 40px 30px;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  border-radius: 25px 25px 0 0;
 }
 .map-container {
-  flex: 1.2;
+  width: 100%;
   border-left: none;
 }
 .map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
+  min-height: 300px;
+  border-radius: 0 0 25px 25px;
 }
 iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 350px;
-  border: none;
-  border-radius: 0 25px 25px 0;
+  border-radius: 0 0 25px 25px;
 }
 .contact-details p {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.contact-details img {
-  width: 20px;
-  height: 20px;
+  flex-direction: row; 
+  font-size: 0.95em;
 }
 .imagen-superior img { 
   width: 100%; 
@@ -691,37 +670,55 @@ body {
   max-height: 90px;
 }
 .primervideo {
-  flex-direction: column;
-  text-align: center;
-  padding: 20px;         
-}
+    flex-direction: column; /* De fila a columna */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
 .primervideo p {
-  width: 110%;      
-  max-width: none;       
-  line-height: 1.1em;    
+  order: 1; /* Texto primero */
+  max-width: 100%;
+  font-size: 1em;
+  line-height: 0.8rem;
 }
-.primervideo .containervideo {
-  display: none;
+.containervideo {
+  order: 2; /* Video después */
+  width: 100%;
+}
+.videosuperior video {
+  width: 100%;
+  height: auto;
 }
 .container1 {
-  margin-top: -30px;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-  padding: 5px;
-}
-.imagen-superior1 {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-}
-.imagen-superior1 video {
-  max-width: 80%;
-  border-radius: 0;
+  gap: 20px;
 }
 .container1 p {
-  font-size: 0.95rem;
-  padding: 0 10px;
+  order: 1;
+  max-width: 100%;
+  font-size: 1em;
+  line-height: 0.8rem;
+}
+.imagen-superior1 {
+  order: 2;
+  width: 100%;
+}
+  .imagen-superior1 video {
+  width: 100%;
+  height: auto;
+}
+.carousel-item img {
+  width: 150px; /* o lo que quieras, por ejemplo 50-60% también queda bien */
+}
+.carousel {
+  margin-top: 40px; /* un poco menos de espacio arriba */
+}
+.carousel-item {
+  margin-bottom: 10px; /* menos espacio debajo si querés */
+}
+.carousel h1 {
+  font-size: 1.2rem; /* opcional: más chico el título si lo ves muy grande */
 }
 .info-container {
   padding: 20px 15px;
@@ -734,6 +731,8 @@ iframe {
   border-radius: 0 0 25px 25px;
   min-height: 300px;
 }
+
+
 footer {
   flex-direction: column;
   align-items: center;
@@ -761,58 +760,4 @@ footer {
 .footer-export img {
   margin-bottom: 10px;
 }
-}
-
-
-/* Media Query para pantallas de ancho máximo 992px*/
-@media (min-width: 768px) and (max-width: 992px) {
-  .logo {
-    max-height: 300px;
-  }
-  .nav-bar ul {
-    padding-left: 30px;
-    justify-content: space-around;
-  }
-  .carrusel-item img {
-    width: 30%;
-  }
-  .servicios, .productos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  .productoindex {
-    max-width: 220px;
-  }
-  .footer-logo img {
-    width: 250px;
-  }
-  .contact-container {
-    flex-direction: row;
-  }
-}
-
-
-/* Dispositivos grandes (escritorios) */
-@media (min-width: 992px) and (max-width: 1200px) {  
-  .nav-bar ul {
-    justify-content: space-evenly;
-  }
-  .video-container {
-    height: 500px;
-  }
-  .carrusel-texto h2 {
-    font-size: 2rem;
-  }
-  .servicios, .productos-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .footer-logo img {
-    width: 300px;
-  }
-  .footer-logo {
-    padding: 30px;
-  }
-  .logo-reducida {
-    max-width: 120px;
-  }
 }
